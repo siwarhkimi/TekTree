@@ -33,7 +33,8 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
+  Modal
 } from "reactstrap";
 
 // core components
@@ -44,13 +45,24 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 import Download from "../IndexSections/Download.js";
 
 class Landing extends React.Component {
+  constructor(props) {
+    super(props);
+    this.submitForm = this.submitForm.bind(this);
+    this.state = {
+      status: "",
+      form:"on"
+    };
+  }
   state = {};
+
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
   render() {
+    const { status } = this.state;
+    const { form } = this.state;
     return (
       <>
         <DemoNavbar />
@@ -148,8 +160,8 @@ class Landing extends React.Component {
                           </h4>
                           <h5>à partir de 359dt</h5>
                           <h6>au lieu de 690dt</h6>
-                          <p className="description mt-3">
-                            <ul>
+                          
+                            <ul className="description mt-3">
                               <li>
                                 Securité SSL (Https)
                               </li>
@@ -160,11 +172,12 @@ class Landing extends React.Component {
                                 3 emails profesionnels
                               </li>
                             </ul>
-                          </p>
+                         
                          
                           
                           <Button
                             className="mt-4"
+                            color="#e4ba91"
                             style={{backgroundColor:"#e4ba91"}}
                             href="#pablo"
                             onClick={e => e.preventDefault()}
@@ -186,7 +199,7 @@ class Landing extends React.Component {
                           </h4>
                           <h5>à partir de 750dt</h5>
                           <h6>au lieu de 1200dt</h6>
-                          <p className="description mt-3">
+                       
                           <ul>
                               <li>
                                 Securité SSL (Https)
@@ -198,13 +211,14 @@ class Landing extends React.Component {
                                 10 emails profesionnels
                               </li>
                             </ul>
-                          </p>
+                          
                          
                           <Button
                             className="mt-4"
                             style={{backgroundColor:"#bdd4e7", backgroundImage:"linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%)"}}
                             href="#pablo"
                             onClick={e => e.preventDefault()}
+                            color="#bdd4e7"
                           >
                             En savoir plus
                           </Button>
@@ -214,15 +228,16 @@ class Landing extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
+                          <div className="icon icon-shape rounded-circle mb-4"  style={{backgroundColor: "#fec84e",
+                              backgroundImage: "linear-gradient(315deg, #fec84e 0%, #ffdea8 74%)", color: "#772F1A                              "}}>
                             <i className="ni ni-planet" />
                           </div>
-                          <h4 className="text-warning text-uppercase">
+                          <h4 className="text-uppercase"  style={{color: "#fec84e"}}>
                             Offre Gold
                           </h4>
                           <h5>à partir de 990dt</h5>
                           <h6>au lieu de 1800dt</h6>
-                          <p className="description mt-3">
+                          
                           <ul>
                               <li>
                                 Securité SSL (Https)
@@ -236,13 +251,15 @@ class Landing extends React.Component {
                               <li>100 produits</li>
                               
                             </ul>
-                          </p>
+                          
                       
                           <Button
                             className="mt-4"
-                            color="warning"
+                            color="#fec84e"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
+                            style={{backgroundColor: "#fec84e",
+                              backgroundImage: "linear-gradient(315deg, #fec84e 0%, #ffdea8 74%)"}}
                           >
                             En savoir plus
                           </Button>
@@ -267,7 +284,7 @@ class Landing extends React.Component {
                           </h4>
                           <h5>à partir de 1500dt</h5>
                           <h6>au lieu de 3200dt</h6>
-                          <p className="description mt-3">
+                          
                           <ul>
                               <li>
                                 Securité SSL (Https)
@@ -282,7 +299,7 @@ class Landing extends React.Component {
                               <li>Formation gratuite</li>
                               <li>Formation marketing digitale</li>
                             </ul>
-                          </p>
+                         
                           
                           <Button
                             className="mt-4"
@@ -305,7 +322,7 @@ class Landing extends React.Component {
                             Offre Sponsoring
                           </h4>
                       
-                          <p className="description mt-3">
+                       
                           <ul>
                               <li>
                                 Affiche publicitaire + 12k personnes pendant 5 jours: à partir de 75dt
@@ -318,7 +335,7 @@ class Landing extends React.Component {
                               </li>
                               
                             </ul>
-                          </p>
+                          
                          
                           <Button
                             className="mt-4"
@@ -340,11 +357,20 @@ class Landing extends React.Component {
                           <h4 className="text-warning text-uppercase">
                            Graphiques
                           </h4>
-                          <p className="description mt-3">
-                            Argon is a great free UI package based on Bootstrap
-                            4 that includes the most important components and
-                            features.
-                          </p>
+                          
+                          <ul>
+                              <li>
+                                Cartes visite: 1000 à 90dt
+                              </li>
+                              <li>
+                              Brochures
+                              </li>
+                              <li>
+                             Flyer: 200
+                              </li>
+                              
+                            </ul>
+                          
                           <div>
                             <Badge color="warning" pill className="mr-1">
                               marketing
@@ -625,190 +651,7 @@ class Landing extends React.Component {
             </div>
           </section>
           <section className="section section-lg">
-            <Container>
-              <Row className="justify-content-center text-center mb-lg">
-                <Col lg="8">
-                  <h2 className="display-3">The amazing Team</h2>
-                  <p className="lead text-muted">
-                    According to the National Oceanic and Atmospheric
-                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                    potentially record maximum.
-                  </p>
-                </Col>
-              </Row>
-              <Row>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-1-800x800.jpg")}
-                      style={{ width: "200px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Ryan Tompson</span>
-                        <small className="h6 text-muted">Web Developer</small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="warning"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="warning"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="warning"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-2-800x800.jpg")}
-                      style={{ width: "200px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Romina Hadid</span>
-                        <small className="h6 text-muted">
-                          Marketing Strategist
-                        </small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="primary"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="primary"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="primary"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-3-800x800.jpg")}
-                      style={{ width: "200px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Alexander Smith</span>
-                        <small className="h6 text-muted">UI/UX Designer</small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-4-800x800.jpg")}
-                      style={{ width: "200px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">John Doe</span>
-                        <small className="h6 text-muted">Founder and CEO</small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="success"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="success"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="success"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
+           
           </section>
           <section className="section section-lg pt-0">
             <Container>
@@ -910,14 +753,15 @@ class Landing extends React.Component {
                 <Col lg="8">
                   <Card className="bg-gradient-secondary shadow">
                     <CardBody className="p-lg-5">
-                      <h4 className="mb-1">Want to work with us?</h4>
+                      <h4 className="mb-1">Avez-vous des questions?</h4>
                       <p className="mt-0">
-                        Your project is very important to us.
+                        Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.
                       </p>
-                      <FormGroup
+                      {/* <FormGroup
                         className={classnames("mt-5", {
                           focused: this.state.nameFocused
                         })}
+                        
                       >
                         <InputGroup className="input-group-alternative">
                           <InputGroupAddon addonType="prepend">
@@ -926,7 +770,7 @@ class Landing extends React.Component {
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
-                            placeholder="Your name"
+                            placeholder="Votre nom"
                             type="text"
                             onFocus={e => this.setState({ nameFocused: true })}
                             onBlur={e => this.setState({ nameFocused: false })}
@@ -945,10 +789,11 @@ class Landing extends React.Component {
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
-                            placeholder="Email address"
+                            placeholder="Votre adresse email"
                             type="email"
                             onFocus={e => this.setState({ emailFocused: true })}
                             onBlur={e => this.setState({ emailFocused: false })}
+                            required
                           />
                         </InputGroup>
                       </FormGroup>
@@ -957,7 +802,7 @@ class Landing extends React.Component {
                           className="form-control-alternative"
                           cols="80"
                           name="name"
-                          placeholder="Type a message..."
+                          placeholder="Votre message ici..."
                           rows="4"
                           type="textarea"
                         />
@@ -972,18 +817,95 @@ class Landing extends React.Component {
                         >
                           Send Message
                         </Button>
+                      </div> */}
+                 {form === "on" ? 
+                      <form name="sentMessage"   onSubmit={this.submitForm}  id="contactForm" action="https://formspree.io/mvovpoer" method="POST">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          id="name"
+                          className="form-control"
+                          placeholder="Name"
+                          required="required"
+                          name="name"
+                        />
+                        <p className="help-block text-danger"></p>
                       </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="email"
+                          id="email"
+                          className="form-control"
+                          placeholder="Email"
+                          required="required"
+                          name="_replyto"
+                        />
+                        <p className="help-block text-danger"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <textarea
+                      name="message"
+                      id="message"
+                      className="form-control"
+                      rows="4"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                 
+                 
+                 {status === "SUCCESS" ? 
+                
+                
+                  <img src={require("assets/img/message.gif")}/>
+                
+              : <button className="btn btn-custom btn-lg" type="submit" value="Send">
+                   Envoyez votre Message
+                  </button>}
+
+                  {status === "ERROR" && <p>Ooops! Il ya un erreur.</p>}
+               
+                </form> :<img src={require("assets/img/message.gif")} style={{height:"80%", width:"95%"}}/>}
                     </CardBody>
                   </Card>
                 </Col>
               </Row>
             </Container>
           </section>
-          <Download />
+         
         </main>
         <CardsFooter />
       </>
     );
+  }
+  submitForm(ev) {
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        this.setState({ status: "SUCCESS" });
+        this.setState({ form: "off" });
+        setTimeout(() => {
+          this.setState({ status: "" });
+          this.setState({ form: "on" });
+        }, (5000));
+      } else {
+        this.setState({ status: "ERROR" });
+      }
+    };
+    xhr.send(data);
   }
 }
 
