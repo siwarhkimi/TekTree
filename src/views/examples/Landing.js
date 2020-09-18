@@ -15,10 +15,10 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+
 // nodejs library that concatenates classes
 import classnames from "classnames";
-
+import React, { useEffect, useState } from "react";
 // reactstrap components
 import {
   Badge,
@@ -41,8 +41,67 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 
-// index page sections
-import Download from "../IndexSections/Download.js";
+
+class Timer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0
+    };
+  }
+
+  componentDidMount() {
+    this.getTimeDifference(this.props.eventDate);
+    setInterval(() => this.getTimeDifference(this.props.eventDate), 1000);
+  }
+
+  leadingZero(num) {
+    return (num < 10 && num > 0) ? "0" + num : num;
+  }
+
+  getTimeDifference(eventDate) {
+    const time = Date.parse(eventDate) - Date.parse(new Date());
+    const days = Math.floor(time / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((time / 1000 / 60) % 60);
+    const seconds = Math.floor((time / 1000) % 60);
+    this.setState({ days, hours, minutes, seconds });
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="App-title" style={{fontSize: "50px", marginTop: "60px"}}>Profitez de nos <b>{this.props.eventName}</b> avant le 03 Novembre. Il vous reste:</div>
+        <div className="clock" style={{display: "inline", margin: "10px"}}>
+          {this.leadingZero(this.state.days)} {this.state.days == 1 ? 'day' : 'days'}
+        </div>
+        <div className="clock" style={{display: "inline", margin: "10px"}}>
+          {this.leadingZero(this.state.hours)} {this.state.hours == 1 ? 'hour' : 'hours'}
+        </div>
+        <div className="clock" style={{display: "inline", margin: "10px"}}>
+          {this.leadingZero(this.state.minutes)} {this.state.minutes == 1 ? 'minute' : 'minutes'}
+        </div>
+        <div className="clock" style={{display: "inline", margin: "10px"}}>
+          {this.leadingZero(this.state.seconds)} {this.state.seconds == 1 ? 'second' : 'seconds'}
+        </div>
+        <br></br>
+        avant la fin du promo.
+      </div>
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
 
 class Landing extends React.Component {
   constructor(props) {
@@ -50,7 +109,13 @@ class Landing extends React.Component {
     this.submitForm = this.submitForm.bind(this);
     this.state = {
       status: "",
-      form:"on"
+      form:"on",
+      events:[
+        { name:'Offres Spéciales', date:'November 3, 2020' },
+      
+      ],
+      newDate: "",
+      newName: "",
     };
   }
   state = {};
@@ -60,16 +125,63 @@ class Landing extends React.Component {
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
+
+  //count down 
+   App() {
+    const calculateTimeLeft = () => {
+      let year = new Date().getFullYear();
+      const difference = +new Date(`${year}-10-1`) - +new Date();
+      let timeLeft = {};
+  
+      if (difference > 0) {
+        timeLeft = {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        };
+      }
+  
+      return timeLeft;
+    };
+  
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    const [year] = useState(new Date().getFullYear());
+  
+    useEffect(() => {
+      setTimeout(() => {
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
+    });
+  
+    const timerComponents = [];
+  
+    Object.keys(timeLeft).forEach((interval) => {
+      if (!timeLeft[interval]) {
+        return;
+      }
+  
+      timerComponents.push(
+        <span>
+          {timeLeft[interval]} {interval}{" "}
+        </span>
+      );
+    })}
+
+
   render() {
     const { status } = this.state;
     const { form } = this.state;
+    let events = this.state.events.map((evt) =>
+      <Timer key={evt.date} eventName={evt.name} eventDate={evt.date} />
+    );
     return (
       <>
         <DemoNavbar />
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
-            <section className="section section-lg section-shaped pb-250">
+            <section className="section section-lg section-shaped pb-250 ">
               <div className="shape shape-style-1 shape-default">
                 <span />
                 <span />
@@ -83,43 +195,11 @@ class Landing extends React.Component {
               </div>
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
-                  <Row>
-                    <Col lg="6">
-                      <h1 className="display-3 text-white">
-                        Découvrez nos offres{" "}
-                        <span>Ici nous allons mettre le compteur</span>
-                      </h1>
-                      <p className="lead text-white">
-                        The design system comes with four pre-built pages to
-                        help you get started faster. You can change the text and
-                        images and you're good to go.
-                      </p>
-                      <div className="btn-wrapper">
-                        <Button
-                          className="btn-icon mb-3 mb-sm-0"
-                          color="info"
-                          href="https://demos.creative-tim.com/argon-design-system-react/#/documentation/alerts?ref=adsr-landing-page"
-                        >
-                          <span className="btn-inner--icon mr-1">
-                            <i className="fa fa-code" />
-                          </span>
-                          <span className="btn-inner--text">Components</span>
-                        </Button>
-                        <Button
-                          className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
-                          color="default"
-                          href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
-                        >
-                          <span className="btn-inner--icon mr-1">
-                            <i className="ni ni-cloud-download-95" />
-                          </span>
-                          <span className="btn-inner--text">
-                            Download React
-                          </span>
-                        </Button>
-                      </div>
-                    </Col>
-                  </Row>
+                  
+                  <div className="display-3 text-white" style={{textAlign: "center",fontSize: "35px", marginTop: "10vh"}}>
+                  {events}
+                  </div>
+                  
                 </div>
               </Container>
               {/* SVG separator */}
@@ -371,17 +451,7 @@ class Landing extends React.Component {
                               
                             </ul>
                           
-                          <div>
-                            <Badge color="warning" pill className="mr-1">
-                              marketing
-                            </Badge>
-                            <Badge color="warning" pill className="mr-1">
-                              product
-                            </Badge>
-                            <Badge color="warning" pill className="mr-1">
-                              launch
-                            </Badge>
-                          </div>
+                         
                           <Button
                             className="mt-4"
                             color="warning"
@@ -546,6 +616,12 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
+          
+
+
+
+
+
           <section className="section pb-0 bg-gradient-warning">
             <Container>
               <Row className="row-grid align-items-center">
