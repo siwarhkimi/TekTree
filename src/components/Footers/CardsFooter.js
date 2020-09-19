@@ -139,7 +139,7 @@ class CardsFooter extends React.Component {
                     href="https://www.creative-tim.com?ref=adsr-footer"
                     target="_blank"
                   >
-                    Creative Tim
+                    TekTree
                   </a>
                   .
                 </div>
@@ -151,7 +151,7 @@ class CardsFooter extends React.Component {
                       href="https://www.creative-tim.com?ref=adsr-footer"
                       target="_blank"
                     >
-                      Creative Tim
+                      TekTree
                     </NavLink>
                   </NavItem>
                   <NavItem>
@@ -162,22 +162,8 @@ class CardsFooter extends React.Component {
                       About Us
                     </NavLink>
                   </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="http://blog.creative-tim.com?ref=adsr-footer"
-                      target="_blank"
-                    >
-                      Blog
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md"
-                      target="_blank"
-                    >
-                      MIT License
-                    </NavLink>
-                  </NavItem>
+                 
+                  
                 </Nav>
               </Col>
             </Row>
