@@ -117,8 +117,10 @@ class CardsFooter extends React.Component {
               <Col md="6">
                 <div className="copyright">
                   © {new Date().getFullYear()}{" "}
+
                   Tek-Tree
                   
+
                 </div>
               </Col>
               <Col md="6">
@@ -126,6 +128,7 @@ class CardsFooter extends React.Component {
                   
                   <NavItem>
                     <NavLink
+
                       href="/aproposdenous"
                       target="_blank"
                     >
@@ -141,6 +144,7 @@ class CardsFooter extends React.Component {
                       Nos rejoindre
                     </NavLink>
                   </NavItem>
+
                 </Nav>
               </Col>
             </Row>
