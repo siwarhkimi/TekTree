@@ -42,65 +42,6 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 
 
-class Timer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0
-    };
-  }
-
-  componentDidMount() {
-    this.getTimeDifference(this.props.eventDate);
-    setInterval(() => this.getTimeDifference(this.props.eventDate), 1000);
-  }
-
-  leadingZero(num) {
-    return (num < 10 && num > 0) ? "0" + num : num;
-  }
-
-  getTimeDifference(eventDate) {
-    const time = Date.parse(eventDate) - Date.parse(new Date());
-    const days = Math.floor(time / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((time / 1000 / 60) % 60);
-    const seconds = Math.floor((time / 1000) % 60);
-    this.setState({ days, hours, minutes, seconds });
-  }
-
-  render() {
-    return (
-      <div>
-        <div className="App-title" style={{fontSize: "50px", marginTop: "60px"}}>Profitez de nos <b>{this.props.eventName}</b> avant le 03 Novembre. Il vous reste:</div>
-        <div className="clock" style={{display: "inline", margin: "10px"}}>
-          {this.leadingZero(this.state.days)} {this.state.days == 1 ? 'day' : 'days'}
-        </div>
-        <div className="clock" style={{display: "inline", margin: "10px"}}>
-          {this.leadingZero(this.state.hours)} {this.state.hours == 1 ? 'hour' : 'hours'}
-        </div>
-        <div className="clock" style={{display: "inline", margin: "10px"}}>
-          {this.leadingZero(this.state.minutes)} {this.state.minutes == 1 ? 'minute' : 'minutes'}
-        </div>
-        <div className="clock" style={{display: "inline", margin: "10px"}}>
-          {this.leadingZero(this.state.seconds)} {this.state.seconds == 1 ? 'second' : 'seconds'}
-        </div>
-        <br></br>
-        avant la fin du promo.
-      </div>
-    );
-  }
-}
-
-
-
-
-
-
-
-
 
 
 class Landing extends React.Component {
@@ -126,55 +67,12 @@ class Landing extends React.Component {
     this.refs.main.scrollTop = 0;
   }
 
-  //count down 
-   App() {
-    const calculateTimeLeft = () => {
-      let year = new Date().getFullYear();
-      const difference = +new Date(`${year}-10-1`) - +new Date();
-      let timeLeft = {};
-  
-      if (difference > 0) {
-        timeLeft = {
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        };
-      }
-  
-      return timeLeft;
-    };
-  
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-    const [year] = useState(new Date().getFullYear());
-  
-    useEffect(() => {
-      setTimeout(() => {
-        setTimeLeft(calculateTimeLeft());
-      }, 1000);
-    });
-  
-    const timerComponents = [];
-  
-    Object.keys(timeLeft).forEach((interval) => {
-      if (!timeLeft[interval]) {
-        return;
-      }
-  
-      timerComponents.push(
-        <span>
-          {timeLeft[interval]} {interval}{" "}
-        </span>
-      );
-    })}
 
 
   render() {
     const { status } = this.state;
     const { form } = this.state;
-    let events = this.state.events.map((evt) =>
-      <Timer key={evt.date} eventName={evt.name} eventDate={evt.date} />
-    );
+    
     return (
       <>
         <DemoNavbar />
@@ -183,25 +81,9 @@ class Landing extends React.Component {
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-250 ">
               <div className="shape shape-style-1 shape-default">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
+               
               </div>
-              <Container className="py-lg-md d-flex">
-                <div className="col px-0">
-                  
-                  <div className="display-3 text-white" style={{textAlign: "center",fontSize: "35px", marginTop: "10vh"}}>
-                  {events}
-                  </div>
-                  
-                </div>
-              </Container>
+            
               {/* SVG separator */}
               <div className="separator separator-bottom separator-skew">
                 <svg
@@ -232,13 +114,10 @@ class Landing extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
-                          <div className="icon icon-shape rounded-circle mb-4" style={{backgroundColor:"#fc9842", backgroundImage: "linear-gradient(315deg, #fc9842 0%, #fe5f75 74%)"}}>
-                            {/*background-color: #fc9842;
-background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
- */}
-                            <i className="ni ni-like-2" />
+                          <div className="icon icon-shape rounded-circle mb-4" style={{backgroundColor:"#e4ba91", color:"#cc6633"}}>
+                            <i className="ni ni-check-bold" />
                           </div>
-                          <h4 className=" text-uppercase" style={{color:"#fc9842"}}>
+                          <h4 className=" text-uppercase" style={{color:"#e4ba91"}}>
                             Offre Bronze
                           </h4>
                           <h5>à partir de 359dt</h5>
@@ -255,11 +134,13 @@ background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
                                 3 emails profesionnels
                               </li>
                             </ul>
+                         
+                         
                           
                           <Button
                             className="mt-4"
                             color="#e4ba91"
-                            style={{backgroundColor:"#fc9842", backgroundImage: "linear-gradient(315deg, #fc9842 0%, #fe5f75 74%)", color:"white"}}
+                            style={{backgroundColor:"#e4ba91"}}
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
@@ -272,7 +153,7 @@ background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
                           <div className="icon icon-shape rounded-circle mb-4" style={{backgroundColor:"#bdd4e7", backgroundImage:"linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%)"}}>
-                            <i className="ni ni-trophy" />
+                            <i className="ni ni-istanbul" />
                           </div>
                           <h4 className="text-uppercase" style={{color:"#D3D3D3"}}>
                             Offre Silver
@@ -311,7 +192,7 @@ background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
                         <CardBody className="py-5">
                           <div className="icon icon-shape rounded-circle mb-4"  style={{backgroundColor: "#fec84e",
                               backgroundImage: "linear-gradient(315deg, #fec84e 0%, #ffdea8 74%)", color: "#772F1A                              "}}>
-                            <i className="ni ni-spaceship" />
+                            <i className="ni ni-planet" />
                           </div>
                           <h4 className="text-uppercase"  style={{color: "#fec84e"}}>
                             Offre Gold
@@ -357,18 +238,15 @@ background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-primary rounded-circle mb-4" style={{backgroundColor: "#d9d9d9",
-                              backgroundImage: "linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%)", color: "#f6f2f2"}}>
-                            <i className="ni ni-diamond" />
+                          <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                            <i className="ni ni-check-bold" />
                           </div>
-                          <h4 className="text-uppercase" style={{color:"#f6f2f2"}}>
+                          <h4 className="text-primary text-uppercase">
                             Offre Diamond
                           </h4>
                           <h5>à partir de 1500dt</h5>
                           <h6>au lieu de 3200dt</h6>
-                          {/*background-color: #d9d9d9;
-background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
- */}
+                          
                           <ul>
                               <li>
                                 Securité SSL (Https)
@@ -387,10 +265,8 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
                           
                           <Button
                             className="mt-4"
-                            color="#d9d9d9"
+                            color="primary"
                             href="#pablo"
-                            style={{backgroundColor: "#d9d9d9",
-                              backgroundImage: "linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%)", color: "white"}}
                             onClick={e => e.preventDefault()}
                           >
                             En savoir plus
@@ -828,137 +704,6 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
                 />
               </svg>
             </div>
-          </section>
-          <section className="section section-lg pt-lg-0 section-contact-us">
-            <Container>
-              <Row className="justify-content-center mt--300">
-                <Col lg="8">
-                  <Card className="bg-gradient-secondary shadow">
-                    <CardBody className="p-lg-5">
-                      <h4 className="mb-1">Avez-vous des questions?</h4>
-                      <p className="mt-0">
-                        Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.
-                      </p>
-                      {/* <FormGroup
-                        className={classnames("mt-5", {
-                          focused: this.state.nameFocused
-                        })}
-                        
-                      >
-                        <InputGroup className="input-group-alternative">
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="ni ni-user-run" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Votre nom"
-                            type="text"
-                            onFocus={e => this.setState({ nameFocused: true })}
-                            onBlur={e => this.setState({ nameFocused: false })}
-                          />
-                        </InputGroup>
-                      </FormGroup>
-                      <FormGroup
-                        className={classnames({
-                          focused: this.state.emailFocused
-                        })}
-                      >
-                        <InputGroup className="input-group-alternative">
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="ni ni-email-83" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Votre adresse email"
-                            type="email"
-                            onFocus={e => this.setState({ emailFocused: true })}
-                            onBlur={e => this.setState({ emailFocused: false })}
-                            required
-                          />
-                        </InputGroup>
-                      </FormGroup>
-                      <FormGroup className="mb-4">
-                        <Input
-                          className="form-control-alternative"
-                          cols="80"
-                          name="name"
-                          placeholder="Votre message ici..."
-                          rows="4"
-                          type="textarea"
-                        />
-                      </FormGroup>
-                      <div>
-                        <Button
-                          block
-                          className="btn-round"
-                          color="default"
-                          size="lg"
-                          type="button"
-                        >
-                          Send Message
-                        </Button>
-                      </div> */}
-                 {form === "on" ? 
-                      <form name="sentMessage"   onSubmit={this.submitForm}  id="contactForm" action="https://formspree.io/mvovpoer" method="POST">
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          id="name"
-                          className="form-control"
-                          placeholder="Name"
-                          required="required"
-                          name="name"
-                        />
-                        <p className="help-block text-danger"></p>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <input
-                          type="email"
-                          id="email"
-                          className="form-control"
-                          placeholder="Email"
-                          required="required"
-                          name="_replyto"
-                        />
-                        <p className="help-block text-danger"></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <textarea
-                      name="message"
-                      id="message"
-                      className="form-control"
-                      rows="4"
-                      placeholder="Message"
-                      required
-                    ></textarea>
-                  </div>
-                 
-                 
-                 {status === "SUCCESS" ? 
-                
-                
-                  <img src={require("assets/img/message.gif")}/>
-                
-              : <button className="btn btn-custom btn-lg" type="submit" value="Send">
-                   Envoyez votre Message
-                  </button>}
-
-                  {status === "ERROR" && <p>Ooops! Il ya un erreur.</p>}
-               
-                </form> :<img src={require("assets/img/message.gif")} style={{height:"80%", width:"95%"}}/>}
-                    </CardBody>
-                  </Card>
-                </Col>
-              </Row>
-            </Container>
           </section>
          
         </main>
