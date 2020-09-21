@@ -182,16 +182,8 @@ class Landing extends React.Component {
           <div className="position-relative">
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-250 ">
-              <div className="shape shape-style-1 shape-default">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
+              <div className="shape shape-style-1 shape-default bg-gradient-success">
+                
               </div>
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
