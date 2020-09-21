@@ -80,7 +80,8 @@ class Landing extends React.Component {
           <div className="position-relative">
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-250 ">
-              <div className="shape shape-style-1 shape-default">
+			
+              <div className="shape shape-style-1 shape-default bg-gradient-default">
                
               </div>
             
@@ -105,251 +106,6 @@ class Landing extends React.Component {
           </div>
 
 
-
-          <section className="section section-lg pt-lg-0 mt--200">
-            <Container >
-              <Row className="justify-content-center">
-                <Col lg="12">
-                  <Row className="row-grid">
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape rounded-circle mb-4" style={{backgroundColor:"#e4ba91", color:"#cc6633"}}>
-                            <i className="ni ni-check-bold" />
-                          </div>
-                          <h4 className=" text-uppercase" style={{color:"#e4ba91"}}>
-                            Offre Bronze
-                          </h4>
-                          <h5>à partir de 359dt</h5>
-                          <h6>au lieu de 690dt</h6>
-                          
-                            <ul className="description mt-3">
-                              <li>
-                                Securité SSL (Https)
-                              </li>
-                              <li>
-                                50GO
-                              </li>
-                              <li>
-                                3 emails profesionnels
-                              </li>
-                            </ul>
-                         
-                         
-                          
-                          <Button
-                            className="mt-4"
-                            color="#e4ba91"
-                            style={{backgroundColor:"#e4ba91"}}
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            En savoir plus
-                          </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape rounded-circle mb-4" style={{backgroundColor:"#bdd4e7", backgroundImage:"linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%)"}}>
-                            <i className="ni ni-istanbul" />
-                          </div>
-                          <h4 className="text-uppercase" style={{color:"#D3D3D3"}}>
-                            Offre Silver
-
-                          </h4>
-                          <h5>à partir de 750dt</h5>
-                          <h6>au lieu de 1200dt</h6>
-                       
-                          <ul>
-                              <li>
-                                Securité SSL (Https)
-                              </li>
-                              <li>
-                                100GO
-                              </li>
-                              <li>
-                                10 emails profesionnels
-                              </li>
-                            </ul>
-                          
-                         
-                          <Button
-                            className="mt-4"
-                            style={{backgroundColor:"#bdd4e7", backgroundImage:"linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%)"}}
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                            color="#bdd4e7"
-                          >
-                            En savoir plus
-                          </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape rounded-circle mb-4"  style={{backgroundColor: "#fec84e",
-                              backgroundImage: "linear-gradient(315deg, #fec84e 0%, #ffdea8 74%)", color: "#772F1A                              "}}>
-                            <i className="ni ni-planet" />
-                          </div>
-                          <h4 className="text-uppercase"  style={{color: "#fec84e"}}>
-                            Offre Gold
-                          </h4>
-                          <h5>à partir de 990dt</h5>
-                          <h6>au lieu de 1800dt</h6>
-                          
-                          <ul>
-                              <li>
-                                Securité SSL (Https)
-                              </li>
-                              <li>
-                                200GO
-                              </li>
-                              <li>
-                                200 emails profesionnels
-                              </li>
-                              <li>100 produits</li>
-                              
-                            </ul>
-                          
-                      
-                          <Button
-                            className="mt-4"
-                            color="#fec84e"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                            style={{backgroundColor: "#fec84e",
-                              backgroundImage: "linear-gradient(315deg, #fec84e 0%, #ffdea8 74%)"}}
-                          >
-                            En savoir plus
-                          </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            <br></br>
-              <Row className="justify-content-center" >
-                <Col lg="12">
-                  <Row className="row-grid">
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                            <i className="ni ni-check-bold" />
-                          </div>
-                          <h4 className="text-primary text-uppercase">
-                            Offre Diamond
-                          </h4>
-                          <h5>à partir de 1500dt</h5>
-                          <h6>au lieu de 3200dt</h6>
-                          
-                          <ul>
-                              <li>
-                                Securité SSL (Https)
-                              </li>
-                              <li>
-                                500GO
-                              </li>
-                              <li>
-                                100 emails profesionnels
-                              </li>
-                              <li>Panier en ligne</li>
-                              <li>Formation gratuite</li>
-                              <li>Formation marketing digitale</li>
-                            </ul>
-                         
-                          
-                          <Button
-                            className="mt-4"
-                            color="primary"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            En savoir plus
-                          </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-success rounded-circle mb-4">
-                            <i className="ni ni-istanbul" />
-                          </div>
-                          <h4 className="text-success text-uppercase">
-                            Offre Sponsoring
-                          </h4>
-                      
-                       
-                          <ul>
-                              <li>
-                                Affiche publicitaire + 12k personnes pendant 5 jours: à partir de 75dt
-                              </li>
-                              <li>
-                              5 Affiches publicitaire + 20k personnes pendant 5 jours: à partir de 100dt
-                              </li>
-                              <li>
-                              20 Affiches publicitaire + 50k personnes + accompagnement stratégique digitale pendant 15 jours: à partir de 200dt
-                              </li>
-                              
-                            </ul>
-                          
-                         
-                          <Button
-                            className="mt-4"
-                            color="success"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            En savoir plus
-                          </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
-                            <i className="ni ni-planet" />
-                          </div>
-                          <h4 className="text-warning text-uppercase">
-                           Graphiques
-                          </h4>
-                          
-                          <ul>
-                              <li>
-                                Cartes visite: 1000 à 90dt
-                              </li>
-                              <li>
-                              Brochures
-                              </li>
-                              <li>
-                             Flyer: 200
-                              </li>
-                              
-                            </ul>
-                          
-                         
-                          <Button
-                            className="mt-4"
-                            color="warning"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            En savoir plus
-                          </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Container>
-          </section>
           <section className="section section-lg">
             <Container>
               <Row className="row-grid align-items-center">
@@ -357,71 +113,27 @@ class Landing extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid floating"
-                    src={require("assets/img/theme/promo-1.png")}
+                    src={require("assets/img/website.gif")}
                   />
                 </Col>
                 <Col className="order-md-1" md="6">
                   <div className="pr-md-5">
-                    <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
-                      <i className="ni ni-settings-gear-65" />
+                    <div className="icon icon-lg icon-shape icon-shape-danger shadow rounded-circle mb-5">
+                      <i className="ni ni-laptop" />
                     </div>
-                    <h3>Awesome features</h3>
+                    <h3>Création et maintenance des sites web</h3>
                     <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
+                      Que ce soit vous voulez votre site web personnel ou professionel, TekTree vous promet de mettre à votre disposition des sites web en toute modernité et avec des normes de qualité internationales.
+					  Vous avez déjà un site web mais vous cherchez à ameliorez son vitesse ou sa qualité ou  votre site bug, notre équipe peut vous aidez à surmonter ces problèmes en toute professionnalisme.
                     </p>
-                    <ul className="list-unstyled mt-5">
-                      <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
-                            <Badge
-                              className="badge-circle mr-3"
-                              color="success"
-                            >
-                              <i className="ni ni-settings-gear-65" />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">
-                              Carefully crafted components
-                            </h6>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
-                            <Badge
-                              className="badge-circle mr-3"
-                              color="success"
-                            >
-                              <i className="ni ni-html5" />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">Amazing page examples</h6>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
-                            <Badge
-                              className="badge-circle mr-3"
-                              color="success"
-                            >
-                              <i className="ni ni-satisfied" />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">
-                              Super friendly support team
-                            </h6>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
+                    <Button
+                            className="mt-4"
+                            color="danger"
+                            href="/creation-des-sites-web"
+                            
+                          >
+                            En savoir plus
+                          </Button>
                   </div>
                 </Col>
               </Row>
@@ -429,14 +141,21 @@ class Landing extends React.Component {
           </section>
           <section className="section bg-secondary">
             <Container>
+				
               <Row className="row-grid align-items-center">
                 <Col md="6">
-                  <Card className="bg-default shadow border-0">
+				<img
+                    alt="..."
+                    className="img-fluid floating"
+                    src={require("assets/img/features-1.svg")}
+                  />
+                  {/* <Card className="bg-default shadow border-0">
                     <CardImg
                       alt="..."
                       src={require("assets/img/theme/img-1-1200x1000.jpg")}
                       top
                     />
+					
                     <blockquote className="card-blockquote">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -455,7 +174,7 @@ class Landing extends React.Component {
                         />
                       </svg>
                       <h4 className="display-3 font-weight-bold text-white">
-                        Design System
+                        Tek Tree
                       </h4>
                       <p className="lead text-italic text-white">
                         The Arctic Ocean freezes every winter and much of the
@@ -463,36 +182,25 @@ class Landing extends React.Component {
                         continue whatever happens.
                       </p>
                     </blockquote>
-                  </Card>
+                  </Card> */}
                 </Col>
                 <Col md="6">
                   <div className="pl-md-5">
-                    <div className="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
-                      <i className="ni ni-settings" />
+                    <div className="icon icon-lg icon-shape icon-shape-default shadow rounded-circle mb-5">
+                      <i className="ni ni-world" />
                     </div>
-                    <h3>Our customers</h3>
-                    <p className="lead">
-                      Don't let your uses guess by attaching tooltips and
-                      popoves to any element. Just make sure you enable them
-                      first via JavaScript.
+                    <h3>Sponsoring</h3>
+                    <p >
+                      Avez-vous besoin que beaucoup des gens voient votre travail ou votre entreprise? Voulez-vous visez le plus possible des publics? Nous vous offrons le service Sponsoring qui fait des publicités du votre produit sur les réseaux sociaux comme Facebook et Instagram
                     </p>
-                    <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
-                    </p>
-                    <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
-                    </p>
-                    <a
-                      className="font-weight-bold text-warning mt-5"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      A beautiful UI Kit for impactful websites
-                    </a>
+					<Button
+                            className="mt-4"
+                            color="default"
+                            href="/sponsoring"
+                            
+                          >
+                            En savoir plus
+                          </Button>
                   </div>
                 </Col>
               </Row>
@@ -504,7 +212,7 @@ class Landing extends React.Component {
 
 
 
-          <section className="section pb-0 bg-gradient-warning">
+          <section className="section">
             <Container>
               <Row className="row-grid align-items-center">
                 <Col className="order-lg-2 ml-lg-auto" md="6">
@@ -519,20 +227,26 @@ class Landing extends React.Component {
                 <Col className="order-lg-1" lg="6">
                   <div className="d-flex px-3">
                     <div>
-                      <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                        <i className="ni ni-building text-primary" />
+                      <div className="icon icon-lg icon-shape icon-shape-danger shadow rounded-circle text-danger">
+                        <i className="ni ni-building text-danger" />
                       </div>
                     </div>
                     <div className="pl-4">
-                      <h4 className="display-3 text-white">Modern Interface</h4>
-                      <p className="text-white">
-                        The Arctic Ocean freezes every winter and much of the
-                        sea-ice then thaws every summer, and that process will
-                        continue whatever.
+                      <h4 className="display-3 ">Service Graphique</h4>
+                      <p className="">
+                        Avez-vous besoin des cartes visites, des brochures, ou des flyers, ... l'équipe de TekTree met à votre disposition le service graphique qui vous permet de personaliser vos graphique à votre façon.
                       </p>
+					  <Button
+                            className="mt-4"
+                            color="danger"
+                            href="/graphiques"
+                            
+                          >
+                            En savoir plus
+                          </Button>
                     </div>
                   </div>
-                  <Card className="shadow shadow-lg--hover mt-5">
+                  {/* <Card className="shadow shadow-lg--hover mt-5">
                     <CardBody>
                       <div className="d-flex px-3">
                         <div>
@@ -588,11 +302,12 @@ class Landing extends React.Component {
                       </div>
                     </CardBody>
                   </Card>
-                </Col>
+                 */}
+				 </Col>
               </Row>
             </Container>
             {/* SVG separator */}
-            <div className="separator separator-bottom separator-skew zindex-100">
+            {/* <div className="separator separator-bottom separator-skew zindex-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
@@ -606,14 +321,15 @@ class Landing extends React.Component {
                   points="2560 0 2560 100 0 100"
                 />
               </svg>
-            </div>
+            </div> */}
+			
           </section>
           <section className="section section-lg">
            
           </section>
           <section className="section section-lg pt-0">
             <Container>
-              <Card className="bg-gradient-warning shadow-lg border-0">
+              <Card className="bg-gradient-danger shadow-lg border-0">
                 <div className="p-5">
                   <Row className="align-items-center">
                     <Col lg="8">
@@ -704,6 +420,137 @@ class Landing extends React.Component {
                 />
               </svg>
             </div>
+          </section>
+		  <section className="section section-lg pt-lg-0 section-contact-us">
+            <Container>
+              <Row className="justify-content-center mt--300">
+                <Col lg="8">
+                  <Card className="bg-gradient-secondary shadow">
+                    <CardBody className="p-lg-5">
+                      <h4 className="mb-1">Avez-vous des questions?</h4>
+                      <p className="mt-0">
+                        Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.
+                      </p>
+                      {/* <FormGroup
+                        className={classnames("mt-5", {
+                          focused: this.state.nameFocused
+                        })}
+                        
+                      >
+                        <InputGroup className="input-group-alternative">
+                          <InputGroupAddon addonType="prepend">
+                            <InputGroupText>
+                              <i className="ni ni-user-run" />
+                            </InputGroupText>
+                          </InputGroupAddon>
+                          <Input
+                            placeholder="Votre nom"
+                            type="text"
+                            onFocus={e => this.setState({ nameFocused: true })}
+                            onBlur={e => this.setState({ nameFocused: false })}
+                          />
+                        </InputGroup>
+                      </FormGroup>
+                      <FormGroup
+                        className={classnames({
+                          focused: this.state.emailFocused
+                        })}
+                      >
+                        <InputGroup className="input-group-alternative">
+                          <InputGroupAddon addonType="prepend">
+                            <InputGroupText>
+                              <i className="ni ni-email-83" />
+                            </InputGroupText>
+                          </InputGroupAddon>
+                          <Input
+                            placeholder="Votre adresse email"
+                            type="email"
+                            onFocus={e => this.setState({ emailFocused: true })}
+                            onBlur={e => this.setState({ emailFocused: false })}
+                            required
+                          />
+                        </InputGroup>
+                      </FormGroup>
+                      <FormGroup className="mb-4">
+                        <Input
+                          className="form-control-alternative"
+                          cols="80"
+                          name="name"
+                          placeholder="Votre message ici..."
+                          rows="4"
+                          type="textarea"
+                        />
+                      </FormGroup>
+                      <div>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="default"
+                          size="lg"
+                          type="button"
+                        >
+                          Send Message
+                        </Button>
+                      </div> */}
+                 {form === "on" ? 
+                      <form name="sentMessage"   onSubmit={this.submitForm}  id="contactForm" action="https://formspree.io/mvovpoer" method="POST">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          id="name"
+                          className="form-control"
+                          placeholder="Name"
+                          required="required"
+                          name="name"
+                        />
+                        <p className="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="email"
+                          id="email"
+                          className="form-control"
+                          placeholder="Email"
+                          required="required"
+                          name="_replyto"
+                        />
+                        <p className="help-block text-danger"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <textarea
+                      name="message"
+                      id="message"
+                      className="form-control"
+                      rows="4"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                 
+                 
+                 {status === "SUCCESS" ? 
+                
+                
+                  <img src={require("assets/img/message.gif")}/>
+                
+              : <button className="btn btn-custom btn-lg" type="submit" value="Send">
+                   Envoyez votre Message
+                  </button>}
+
+                  {status === "ERROR" && <p>Ooops! Il ya un erreur.</p>}
+               
+                </form> :<img src={require("assets/img/message.gif")} style={{height:"80%", width:"95%"}}/>}
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
+            </Container>
           </section>
          
         </main>
