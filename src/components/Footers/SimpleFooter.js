@@ -38,10 +38,10 @@ class SimpleFooter extends React.Component {
             <Row className=" row-grid align-items-center mb-5">
               <Col lg="6">
                 <h3 className=" text-primary font-weight-light mb-2">
-                  Thank you for supporting us!
+                  Merci de nos supporter!
                 </h3>
                 <h4 className=" mb-0 font-weight-light">
-                  Let's get in touch on any of these platforms.
+                 Suivez-nos sur nos réseaux sociaux.
                 </h4>
               </Col>
               <Col className="text-lg-center btn-wrapper" lg="6">
@@ -108,49 +108,30 @@ class SimpleFooter extends React.Component {
               <Col md="6">
                 <div className=" copyright">
                   © {new Date().getFullYear()}{" "}
-                  <a
-                    href="https://www.creative-tim.com?ref=adsr-footer"
-                    target="_blank"
-                  >
-                    TekTree
-                  </a>
-                  .?
+                 
+                    Tek-Tree.
+                  
                 </div>
               </Col>
               <Col md="6">
                 <Nav className=" nav-footer justify-content-end">
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com?ref=adsr-footer"
-                      target="_blank"
+                      href="/aproposdenous"
+                     
                     >
-                      Creative Tim
+                      A propos de nous
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com/presentation?ref=adsr-footer"
-                      target="_blank"
+                      href="https://www.facebook.com/TekTree-Conception-Web-116792776831961"
+                      
                     >
-                      About Us
+                      Suivez-nous sur notre Page Facebook
                     </NavLink>
                   </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="http://blog.creative-tim.com?ref=adsr-footer"
-                      target="_blank"
-                    >
-                      Blog
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md"
-                      target="_blank"
-                    >
-                      MIT License
-                    </NavLink>
-                  </NavItem>
+                  
                 </Nav>
               </Col>
             </Row>

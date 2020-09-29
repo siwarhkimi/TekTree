@@ -28,26 +28,35 @@ import Landing from "views/examples/Landing.js";
 import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
+import Services from "views/examples/Services.js";
+import Sponsoring from "views/examples/Sponsoring.js";
+import Graphiques from "views/examples/Graphiques.js";
+import CreationWeb from "views/examples/CreationWeb.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact render={props => <Index {...props} />} />
       <Route
-        path="/landing-page"
+        path="/offres"
         exact
         render={props => <Landing {...props} />}
       />
-      <Route path="/login-page" exact render={props => <Login {...props} />} />
+      <Route path="/sponsoring" exact render={props => <Sponsoring {...props} />} />
       <Route
-        path="/profile-page"
+        path="/graphiques"
         exact
-        render={props => <Profile {...props} />}
+        render={props => <Graphiques {...props} />}
       />
       <Route
-        path="/register-page"
+        path="/creation-des-sites-web"
         exact
-        render={props => <Register {...props} />}
+        render={props => <CreationWeb {...props} />}
+      />
+       <Route
+        path="/services"
+        exact
+        render={props => <Services {...props} />}
       />
       <Redirect to="/" />
     </Switch>
