@@ -38,8 +38,8 @@ class Carousel extends React.Component {
                 <MovingComponent type="typewriter"
                                  dataText={[
                                   'TekTree',
-                                  'votre agence web',
-                                  'préférée'
+                                  'Votre Agence Web',
+                                  'Préférée'
                                   ]} />
                 </h1>
                 
