@@ -219,8 +219,8 @@ class Landing extends React.Component {
                   <div className="position-relative pl-md-5">
                     <img
                       alt="..."
-                      className="img-center img-fluid"
-                      src={require("assets/img/ill/ill-2.svg")}
+                      className="img-fluid floating"
+                      src={require("assets/img/graphics.gif")}
                     />
                   </div>
                 </Col>
@@ -334,24 +334,15 @@ class Landing extends React.Component {
                   <Row className="align-items-center">
                     <Col lg="8">
                       <h3 className="text-white">
-                        We made website building easier for you.
+                        Notre bonheur est votre confort.
                       </h3>
                       <p className="lead text-white mt-3">
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture.
+                        Nous mettons à votre disposition tous ces services et plus encore, à des prix abordables pour tous et avec plusieurs facilités de paiement.
                       </p>
+                      <p className="signature" style={{marginLeft:"400px", fontSize:"17px", color:"white"}}>L'équipe de TekTree.</p>
                     </Col>
                     <Col className="ml-lg-auto" lg="3">
-                      <Button
-                        block
-                        className="btn-white"
-                        color="default"
-                        href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
-                        size="lg"
-                      >
-                        Download React
-                      </Button>
+                    <img src={require("assets/img/logo-tektree.png")} style={{width:"70%", height:"70%"}}/>
                     </Col>
                   </Row>
                 </div>
@@ -362,47 +353,13 @@ class Landing extends React.Component {
             <Container className="pt-lg pb-300">
               <Row className="text-center justify-content-center">
                 <Col lg="10">
-                  <h2 className="display-3 text-white">Build something</h2>
+                  <h2 className="display-3 text-white">Contactez-nous pour plus d'information</h2>
                   <p className="lead text-white">
-                    According to the National Oceanic and Atmospheric
-                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                    potentially record low maximum sea ice extent tihs year down
-                    to low ice.
+                    Nous vous fournissons tous ces services et plus encore, à des prix abordables pour tous et avec plusieurs moyens de facilités de paiement.
                   </p>
                 </Col>
               </Row>
-              <Row className="row-grid mt-5">
-                <Col lg="4">
-                  <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i className="ni ni-settings text-primary" />
-                  </div>
-                  <h5 className="text-white mt-3">Building tools</h5>
-                  <p className="text-white mt-3">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </Col>
-                <Col lg="4">
-                  <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i className="ni ni-ruler-pencil text-primary" />
-                  </div>
-                  <h5 className="text-white mt-3">Grow your market</h5>
-                  <p className="text-white mt-3">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </Col>
-                <Col lg="4">
-                  <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i className="ni ni-atom text-primary" />
-                  </div>
-                  <h5 className="text-white mt-3">Launch time</h5>
-                  <p className="text-white mt-3">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </Col>
-              </Row>
+            
             </Container>
             {/* SVG separator */}
             <div className="separator separator-bottom separator-skew zindex-100">
@@ -501,7 +458,7 @@ class Landing extends React.Component {
                           type="text"
                           id="name"
                           className="form-control"
-                          placeholder="Name"
+                          placeholder="Nom et Prénom"
                           required="required"
                           name="name"
                         />
