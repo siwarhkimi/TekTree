@@ -50,7 +50,7 @@ class CardsFooter extends React.Component {
                 <h4 className="mb-0 font-weight-light">
                   Suivez-nous sur notre Page Facebook: 
                   <Button
-                  className="btn-icon-only rounded-circle ml-1"
+                  className="btn-icon-only rounded-circle ml-2"
                   color="facebook"
                   href="https://www.facebook.com/TekTree-Conception-Web-116792776831961"
                   id="tooltip837440414"
@@ -61,7 +61,7 @@ class CardsFooter extends React.Component {
                   </span>
                 </Button>
                 <UncontrolledTooltip delay={0} target="tooltip837440414">
-                  aimez-nous
+                  Suivez-nous
                 </UncontrolledTooltip>
                 </h4>
                 
@@ -129,10 +129,10 @@ class CardsFooter extends React.Component {
                   <NavItem>
                     <NavLink
 
-                      href="/aproposdenous"
-                      target="_blank"
+                      href="/services"
+                      
                     >
-                      A propos de nous
+                      Nos services
                     </NavLink>
                   </NavItem>
                   

@@ -111,7 +111,9 @@ class DemoNavbar extends React.Component {
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Nos services</span>
+                      <Link to="/services">
+                      <span className="nav-link-inner--text text-white">Nos services</span>
+                      </Link>
                     </DropdownToggle>
                     <DropdownMenu>
                       <DropdownItem to="/creation-des-sites-web" tag={Link}>
@@ -129,9 +131,10 @@ class DemoNavbar extends React.Component {
                   
                 </Nav>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                      <span className="nav-link-inner--text"><Link to="/landing-page" style={{color:"white"}}>Nos offres</Link></span>
+                      <span className="nav-link-inner--text"><Link to="/offres" style={{color:"white"}}>Nos offres</Link></span>
                 </Nav>
-                <Nav className="align-items-lg-center ml-lg-auto" navbar>
+                <Nav className="align-items-lg-center ml-lg-auto text-white" navbar>
+                  Suivez-nous sur Facebook 
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
@@ -148,7 +151,7 @@ class DemoNavbar extends React.Component {
                       Suivez-nous sur Facebook
                     </UncontrolledTooltip>
                   </NavItem>
-                  <NavItem>
+                  {/* <NavItem>
                     <NavLink
                       className="nav-link-icon"
                       href="https://www.instagram.com/creativetimofficial"
@@ -179,8 +182,8 @@ class DemoNavbar extends React.Component {
                     <UncontrolledTooltip delay={0} target="tooltip184698705">
                       Suivez-nous sur Twitter
                     </UncontrolledTooltip>
-                  </NavItem>
-                  <NavItem>
+                  </NavItem> */}
+                  {/* <NavItem>
                     <NavLink
                       className="nav-link-icon"
                       href="https://github.com/creativetimofficial/argon-design-system-react"
@@ -195,7 +198,7 @@ class DemoNavbar extends React.Component {
                     <UncontrolledTooltip delay={0} target="tooltip112445449">
                       Suivez-nous sur Linkedin
                     </UncontrolledTooltip>
-                  </NavItem>
+                  </NavItem> */}
                   <NavItem className="d-none d-lg-block ml-lg-4">
                     {/* <Button
                       className="btn-neutral btn-icon"
