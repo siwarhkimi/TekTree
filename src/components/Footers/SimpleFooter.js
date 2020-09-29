@@ -112,9 +112,9 @@ class SimpleFooter extends React.Component {
                     href="https://www.creative-tim.com?ref=adsr-footer"
                     target="_blank"
                   >
-                    Creative Tim
+                    TekTree
                   </a>
-                  .
+                  .?
                 </div>
               </Col>
               <Col md="6">
