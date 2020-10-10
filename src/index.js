@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
@@ -24,14 +7,13 @@ import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
 import Index from "views/Index.js";
-import Landing from "views/examples/Landing.js";
-import Login from "views/examples/Login.js";
-import Profile from "views/examples/Profile.js";
-import Register from "views/examples/Register.js";
-import Services from "views/examples/Services.js";
-import Sponsoring from "views/examples/Sponsoring.js";
-import Graphiques from "views/examples/Graphiques.js";
-import CreationWeb from "views/examples/CreationWeb.js";
+import Offres from "views/components/Offres.js";
+import Services from "views/components/Services.js";
+import Sponsoring from "views/components/Sponsoring.js";
+import Graphiques from "views/components/Graphiques.js";
+import CreationWeb from "views/components/CreationWeb.js";
+import NotFound from "views/components/404.js";
+import About from "views/components/About.js";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -40,7 +22,7 @@ ReactDOM.render(
       <Route
         path="/offres"
         exact
-        render={props => <Landing {...props} />}
+        render={props => <Offres {...props} />}
       />
       <Route path="/sponsoring" exact render={props => <Sponsoring {...props} />} />
       <Route
@@ -58,7 +40,17 @@ ReactDOM.render(
         exact
         render={props => <Services {...props} />}
       />
-      <Redirect to="/" />
+       <Route
+        path="/about"
+        exact
+        render={props => <About {...props} />}
+      />
+      <Route
+        path="/404"
+        exact
+        render={props => <NotFound {...props} />}
+      /> 
+      <Redirect to="/404" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

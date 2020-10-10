@@ -1,23 +1,4 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-
-// reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 
 class BasicElements extends React.Component {
@@ -31,15 +12,12 @@ class BasicElements extends React.Component {
           <Container>
             <Row className="justify-content-center">
               <Col lg="12">
-                {/* Basic elements */}
                 <h2 className="mb-5">
                   <span>Basic Elements</span>
                 </h2>
-                {/* Buttons */}
                 <h3 className="h4 text-success font-weight-bold mb-4">
                   Buttons
                 </h3>
-                {/* Button styles */}
                 <div>
                   <Button color="primary" type="button">
                     Button
@@ -63,7 +41,7 @@ class BasicElements extends React.Component {
                       <i className="ni ni-bag-17" />
                     </span>
                   </Button>
-                  {/* Button wizes */}
+                 
                   <div className="mb-3 mt-5">
                     <small className="text-uppercase font-weight-bold">
                       Pick your size
@@ -84,7 +62,7 @@ class BasicElements extends React.Component {
                     Large Button
                   </Button>
                 </div>
-                {/* Button colors */}
+               
                 <div className="mb-3 mt-5">
                   <small className="text-uppercase font-weight-bold">
                     Pick your color
