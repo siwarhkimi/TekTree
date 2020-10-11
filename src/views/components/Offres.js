@@ -47,16 +47,16 @@ class Timer extends React.Component {
         <div className="App-title" style={{fontSize: "50px", marginTop: "60px"}}>Profitez de nos <b>{this.props.eventName}</b> avant le 01 Novembre. Il vous reste:
         </div>
         <div className="clock" style={{display: "inline", margin: "10px"}}>
-          {this.leadingZero(this.state.days)} {this.state.days == 1 ? 'day' : 'days'}
+          {this.leadingZero(this.state.days)} {this.state.days === 1 ? 'day' : 'days'}
         </div>
         <div className="clock" style={{display: "inline", margin: "10px"}}>
-          {this.leadingZero(this.state.hours)} {this.state.hours == 1 ? 'hour' : 'hours'}
+          {this.leadingZero(this.state.hours)} {this.state.hours === 1 ? 'hour' : 'hours'}
         </div>
         <div className="clock" style={{display: "inline", margin: "10px"}}>
-          {this.leadingZero(this.state.minutes)} {this.state.minutes == 1 ? 'minute' : 'minutes'}
+          {this.leadingZero(this.state.minutes)} {this.state.minutes === 1 ? 'minute' : 'minutes'}
         </div>
         <div className="clock" style={{display: "inline", margin: "10px"}}>
-          {this.leadingZero(this.state.seconds)} {this.state.seconds == 1 ? 'second' : 'seconds'}
+          {this.leadingZero(this.state.seconds)} {this.state.seconds === 1 ? 'second' : 'seconds'}
         </div>
         <br></br>
         avant la fin du promo.
@@ -74,20 +74,16 @@ class Landing extends React.Component {
       status: "",
       form:"on",
       events:[
-        { name:'Offres Spéciales', date:'November 1, 2020' },
-      
+        { name:'Offres Spéciales', date:'November 1, 2020' }, 
       ],
       newDate: "",
       newName: "",
-      show:false
+      
     };
-    this.showTable = this.showTable.bind(this)
   }
   state = {};
 
-  showTable() {
-    this.state.show=this.setState(!this.state.show)
-  }
+ 
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -113,7 +109,7 @@ class Landing extends React.Component {
     };
   
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-    const [year] = useState(new Date().getFullYear());
+    //const [year] = useState(new Date().getFullYear());
   
     useEffect(() => {
       setTimeout(() => {
@@ -169,7 +165,6 @@ class Landing extends React.Component {
                       </div>
               </Col>
               <Col className="mt-9 mt-sm-9" sm="3" xs="6">
-              
                 <img
                   alt="..."
                   className="img-fluid floating"
@@ -178,10 +173,6 @@ class Landing extends React.Component {
                 />
               </Col>
             </Row>
-
-
-
-
               <div className="separator separator-bottom separator-skew">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -230,18 +221,18 @@ class Landing extends React.Component {
                                 20 produits
                               </li>
                             </ul>
-                        
-                          <Button
-                            id="savoir"
-                            className="mt-4"
-                            color="#e4ba91"
-                            style={{backgroundColor:"#fc9842", backgroundImage: "linear-gradient(315deg, #fc9842 0%, #fe5f75 74%)", color:"white"}}
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
                             
-                          >
-                            En savoir plus
-                          </Button>
+                              <Button
+                                className="mt-4"
+                                color="#e4ba91"
+                                style={{backgroundColor:"#fc9842", backgroundImage: "linear-gradient(315deg, #fc9842 0%, #fe5f75 74%)", color:"white"}} 
+                                href="#Table"
+                              >
+
+
+                               En savoir plus
+                              </Button>
+                             
                         </CardBody>
                       </Card>
                     </Col>
@@ -272,13 +263,10 @@ class Landing extends React.Component {
                                 50 produits
                               </li>
                             </ul>
-                          
-                         
                           <Button
                             className="mt-4"
                             style={{backgroundColor:"#bdd4e7", backgroundImage:"linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%)"}}
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            href="#Table"
                             color="#bdd4e7"
                           >
                             En savoir plus
@@ -312,18 +300,18 @@ class Landing extends React.Component {
                               <li>100 produits</li>
                               
                             </ul>
-                          
-                      
+                           
                           <Button
                             className="mt-4"
                             color="#fec84e"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            href="#Table"
+                            
                             style={{backgroundColor: "#fec84e",
                               backgroundImage: "linear-gradient(315deg, #fec84e 0%, #ffdea8 74%)"}}
                           >
                             En savoir plus
                           </Button>
+                         
                         </CardBody>
                       </Card>
                     </Col>
@@ -334,16 +322,16 @@ class Landing extends React.Component {
             
             </Container>
           </section>
-         <section className="section bg-secondary" id="savoir">
+         <section className="section bg-secondary" id="Table">
          <Container>
-           <CustomizedTables/>
+           <CustomizedTables   />
            </Container>
           </section>
           <section className="section pb-10 " >
             <Container>
               <Row className="row-grid align-items-center">
                 <Col className="order-lg-2 ml-lg-auto" md="6">
-				         <img  className="img-fluid floating" src={require('assets/img/offres.png')} />
+				         <img  alt="..." className="img-fluid floating" src={require('assets/img/offres.png')} />
                 </Col>
                 <Col className="order-lg-1" lg="6">
                   <div className="d-flex px-2 ">
@@ -415,7 +403,7 @@ class Landing extends React.Component {
                  {status === "SUCCESS" ? 
                 
                 
-                  <img src={require("assets/img/message.gif")}/>
+                  <img alt="..." src={require("assets/img/message.gif")}/>
                 
               : <button className="btn btn-custom btn-lg" type="submit" value="Send">
                    Envoyez votre Message
@@ -423,7 +411,7 @@ class Landing extends React.Component {
 
                   {status === "ERROR" && <p>Ooops! Il ya un erreur.</p>}
                
-                </form> :<img src={require("assets/img/message.gif")} style={{height:"80%", width:"95%"}}/>}
+                </form> :<img alt="..." src={require("assets/img/message.gif")} style={{height:"80%", width:"95%"}}/>}
                     </CardBody>
                   </Card>
                 </Col>

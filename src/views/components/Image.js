@@ -16,7 +16,7 @@ class CarouselPage extends Component {
           <MDBCol md="12" className="mb-3 ">
 		  <Fade left>
 				<div className="blur--hover">
-					<a href="/services"><img  className="img-fluid z-depth-1 blur-item mt-5 rounded-lg shadow-lg on-screen" src={require('assets/img/agence1.jpg')} />
+					<a href="/services"><img alt="..." className="img-fluid z-depth-1 blur-item mt-5 rounded-lg shadow-lg on-screen" src={require('assets/img/agence1.jpg')} />
 					<span className="blur-hidden h3 text-darker" style={{fontSize:'80px'}}>
 					<center>	Nos Services Web</center>
 					</span>
@@ -31,7 +31,7 @@ class CarouselPage extends Component {
 			<div className="blur--hover">
 				<a href="/creation-des-sites-web">
 					<Fade right>
-						<img  className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen " src={require('assets/img/des1.jpg')} />
+						<img alt="..." className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen " src={require('assets/img/des1.jpg')} />
 					</Fade>
 					<span className="blur-hidden h3 text-darker" style={{fontSize:'30px'}}>
 						<center>Site Personnel sur mesure</center>	
@@ -43,7 +43,7 @@ class CarouselPage extends Component {
 			<div className="blur--hover">
 				<div className="blur--hover">
 					<a href="/creation-des-sites-web">
-						<Fade right>	<img  className="img-fluid z-depth-1 blur-item  rounded shadow-lg on-screen" src={require('assets/img/des4.jpg')} />
+						<Fade right>	<img alt="..." className="img-fluid z-depth-1 blur-item  rounded shadow-lg on-screen" src={require('assets/img/des4.jpg')} />
 						</Fade>
 						<span className="blur-hidden h4 text-darker" style={{fontSize:'30px'}}><center>Site E-commerce sur mesure</center></span>
 					</a>
@@ -55,7 +55,7 @@ class CarouselPage extends Component {
 				<div className="blur--hover">
 					<a href="/creation-des-sites-web">
 						<Fade right>
-							<img  className="img-fluid rounded shadow-lg z-depth-1 blur-item  on-screen" src={require('assets/img/maintenance.jpg')}/>
+							<img alt="..." className="img-fluid rounded shadow-lg z-depth-1 blur-item  on-screen" src={require('assets/img/maintenance.jpg')}/>
 						</Fade>
 						<span className="blur-hidden h4 text-darker" style={{fontSize:'30px'}}><center>Maintenance des sites web</center>
 						</span>
@@ -70,7 +70,7 @@ class CarouselPage extends Component {
 				<div className="blur--hover">
 					<div className="blur--hover">
 						<a href="/sponsoring">						
-							<img  className="img-fluid z-depth-1 blur-item  rounded shadow-lg on-screen" src={require('assets/img/marketing.jpg')} /> 
+							<img alt="..." className="img-fluid z-depth-1 blur-item  rounded shadow-lg on-screen" src={require('assets/img/marketing.jpg')} /> 
 							<span className="blur-hidden h4 text-darker" style={{fontSize:'30px'}}><center>Marketing Digital</center>
 							</span>
 						</a>
@@ -81,7 +81,7 @@ class CarouselPage extends Component {
 				<div className="blur--hover">
 					<div className="blur--hover">
 						<a href="/sponsoring">
-							<img  className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/smedia.jpg')} />
+							<img alt="..." className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/smedia.jpg')} />
 							<span className="blur-hidden h4 text-darker" style={{fontSize:'30px'}}><center>Sponsoring Social media</center></span>
 						</a>
 					</div>
@@ -94,7 +94,7 @@ class CarouselPage extends Component {
          	<MDBCol lg="4" md="12" className="mb-3">
           		<div className="blur--hover">
 					<a href="/graphiques">
-		  				<img  className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/desss.jpg')} />
+		  				<img alt="..." className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/desss.jpg')} />
 		  				<span className="blur-hidden h3 text-darker" style={{fontSize:'30px'}}>
 						<center>Flyers</center>	
 						</span>
@@ -105,7 +105,7 @@ class CarouselPage extends Component {
 				<div className="blur--hover">
 					<div className="blur--hover">
 						<a href="/graphiques">
-							<img  className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/flyer.jpg')} />
+							<img  alt="..." className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/flyer.jpg')} />
 							<span className="blur-hidden h4 text-darker" style={{fontSize:'30px'}}><center>Brochure</center></span>
 						</a>
 					</div>
@@ -115,7 +115,7 @@ class CarouselPage extends Component {
 		  		<div className="blur--hover">
 					<div className="blur--hover">
 						<a href="/graphiques">
-							<img  className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/cartes.jpg')} />
+							<img alt="..." className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/cartes.jpg')} />
 							<span className="blur-hidden h4 flex-cente text-darker" style={{fontSize:'30px'}}><center>Cartes</center></span>
 						</a>
 					</div>

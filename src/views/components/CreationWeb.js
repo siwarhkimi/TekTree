@@ -356,7 +356,7 @@ class CreationWeb extends React.Component {
             <Container>
               <Row className="row-grid align-items-center">
                 <Col className="order-lg-2 ml-lg-auto" md="6">
-			          	<img  className="img-fluid floating" src={require('assets/img/multi.png')}  />
+			          	<img  alt="..." className="img-fluid floating" src={require('assets/img/multi.png')}  />
                 </Col>
                 <Col className="order-lg-1" lg="6">
                   <div className="d-flex px-2">  

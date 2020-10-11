@@ -33,7 +33,7 @@ class About extends React.Component {
           </Col>
           <Col className="" lg="6">   
 		  
-          <img src={require("assets/img/about1.gif")} className="img-center  img-fluid  rounded"/>
+          <img alt="..." src={require("assets/img/about1.gif")} className="img-center  img-fluid  rounded"/>
           </Col>	  
         </Row>
         <Row className="justify-content-center ">

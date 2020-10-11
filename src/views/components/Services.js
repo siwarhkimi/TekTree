@@ -199,7 +199,7 @@ class Landing extends React.Component {
                       <p className="signature" style={{marginLeft:"400px", fontSize:"17px", color:"white"}}>L'équipe de TekTree.</p>
                     </Col>
                     <Col className="ml-lg-auto" lg="3">
-                    <img src={require("assets/img/logo-tektree.png")} style={{width:"70%", height:"70%"}}/>
+                    <img alt="..." src={require("assets/img/logo-tektree.png")} style={{width:"70%", height:"70%"}}/>
                     </Col>
                   </Row>
                 </div>
@@ -290,7 +290,7 @@ class Landing extends React.Component {
                  {status === "SUCCESS" ? 
                 
                 
-                  <img src={require("assets/img/message.gif")}/>
+                  <img alt="..." src={require("assets/img/message.gif")}/>
                 
               : <button className="btn btn-custom btn-lg" type="submit" value="Send">
                    Envoyez votre Message
@@ -298,7 +298,7 @@ class Landing extends React.Component {
 
                   {status === "ERROR" && <p>Ooops! Il ya un erreur.</p>}
                
-                </form> :<img src={require("assets/img/message.gif")} style={{height:"80%", width:"95%"}}/>}
+                </form> :<img alt="..." src={require("assets/img/message.gif")} style={{height:"80%", width:"95%"}}/>}
                     </CardBody>
                   </Card>
                 </Col>

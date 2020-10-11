@@ -38,7 +38,7 @@ class Login extends React.Component {
                 <p className="lead text-dark">
                   Nous sommes disponibles 24h/24 et 7j/7.
                 </p>
-                <img  className="img-fluid floating" src={require('assets/img/contact.png')}  />
+                <img  alt="..." className="img-fluid floating" src={require('assets/img/contact.png')}  />
                 
               </Col>
               <Col className="mt-8" lg="5">
@@ -50,7 +50,7 @@ class Login extends React.Component {
                       <h5 className="text-center text-dark  text-muted mb-4">
                        Avez-vous des questions?
                       </h5>
-                      <h4 className="mb-1"></h4>
+                      
                       <p className="mt-0">
                         Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.
                       </p>
@@ -100,7 +100,7 @@ class Login extends React.Component {
                  {status === "SUCCESS" ? 
                 
                 
-                  <img src={require("assets/img/message.gif")}/>
+                  <img alt="..." src={require("assets/img/message.gif")}/>
                 
               : <button className="btn btn-custom btn-lg" type="submit" value="Send">
                    Envoyez votre Message
@@ -108,7 +108,7 @@ class Login extends React.Component {
 
                   {status === "ERROR" && <p>Ooops! Il ya un erreur.</p>}
                
-                </form> :<img src={require("assets/img/message.gif")} style={{height:"80%", width:"95%"}}/>}
+                </form> :<img alt="..." src={require("assets/img/message.gif")} style={{height:"80%", width:"95%"}}/>}
                     </CardBody>
                   </Card>
                 </div>

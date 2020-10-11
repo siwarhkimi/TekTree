@@ -9,7 +9,7 @@ const ServicesHome = () => {
         <MDBRow>
           <MDBCol md="6" className="">
 						<a href="/offres">						
-            <img src={require("assets/img/promo.gif")} className=" img-fluid  rounded"/> 
+            <img alt="..." src={require("assets/img/promo.gif")} className=" img-fluid  rounded"/> 
 						</a>
         	</MDBCol>
        		<MDBCol md="6" className="mt-5">
