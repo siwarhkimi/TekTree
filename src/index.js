@@ -40,11 +40,11 @@ ReactDOM.render(
         exact
         render={props => <Services {...props} />}
       />
-       <Route
+       {/* <Route
         path="/about"
         exact
         render={props => <About {...props} />}
-      />
+      /> */}
       <Route
         path="/404"
         exact

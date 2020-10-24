@@ -5,7 +5,7 @@ import Carousel from "./components/Carousel.js";
 import ContactHome from "./components/ContactHome.js";
 import ServicesHome from "./components/ServicesHome.js";
 import Image from"./components/Image";
-import { ParallaxProvider } from 'react-scroll-parallax';
+
 
 class Index extends React.Component {
   componentDidMount() {
@@ -16,7 +16,6 @@ class Index extends React.Component {
   render() {
     return (
       <>
-       <ParallaxProvider>
           <DemoNavbar />
           <main ref="main">        
             <Carousel />      
@@ -25,7 +24,6 @@ class Index extends React.Component {
             <ContactHome />
           </main>
           <CardsFooter />
-       </ParallaxProvider>
       </>
     );
   }
