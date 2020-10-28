@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "TekTree the best web agence in Tunisia",
   "main": "index.js",
+  "homepage": "https://siwarhkimi.github.io/TekTree/",
   "repository": {
     "type": "git"
   },
@@ -30,7 +31,9 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.css",
     "minify-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.css --source-map true"
+    "map-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.css --source-map true",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d  build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +50,7 @@
     "bootstrap": "^4.3.1",
     "classnames": "2.2.6",
     "framer-motion": "^2.7.5",
+    "gh-pages": "^3.1.0",
     "headroom.js": "0.11.0",
     "mdbreact": "^4.27.0",
     "moment": "2.24.0",
