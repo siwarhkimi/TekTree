@@ -49,11 +49,10 @@ class CreationWeb extends React.Component {
                       alt="..."
                       className="img-fluid floating"
                       src={require("assets/img/dame.png")}
-                      style={{ width: "250px" }}
                       sm="3" xs="6"
                     />
                   </Col>        
-                  <Col className="mt-5 mt-sm-0" sm="6" xs="12">
+                  <Col className="mt-9 mt-sm-7" sm="6" xs="12">
                   <center>  
                         <h2  className="align-items-center display-1 text-white" style={{marginTop:"100px"}}>
                           <MovingComponent
@@ -97,7 +96,7 @@ class CreationWeb extends React.Component {
                       alt="..."
                       className="img-fluid floating"
                       src={require("assets/img/website.png")}
-                      style={{ width: "250px" }}
+                      
                     />
                    </Col>
                   </Row>

@@ -13,7 +13,7 @@ import Sponsoring from "views/components/Sponsoring.js";
 import Graphiques from "views/components/Graphiques.js";
 import CreationWeb from "views/components/CreationWeb.js";
 import NotFound from "views/components/404.js";
-import About from "views/components/About.js";
+
 
 ReactDOM.render(
   <BrowserRouter>

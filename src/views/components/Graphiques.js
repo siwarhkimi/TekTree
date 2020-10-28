@@ -11,8 +11,7 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 import { MovingComponent } from "react-moving-text";
-
-
+import ImagesGraphique from './ImagesGraphique'
 
 class Graphique extends React.Component {
   constructor(props) {
@@ -50,12 +49,10 @@ class Graphique extends React.Component {
                     <img
                       alt="..."
                       className="img-fluid floating"
-                      src={require("assets/img/like.png")}
-                     
-                      sm="3" xs="6"
+                      src={require("assets/img/graphique/6.png")}
                     />
                   </Col>        
-                  <Col className="mt-9 mt-sm-6" sm="6" xs="12">
+                  <Col className="mt-9 mt-sm-4" sm="6" xs="12">
                   <center>  
                         <h2  className="align-items-center display-1 text-white" style={{marginTop:"100px"}}>
                           <MovingComponent
@@ -66,7 +63,7 @@ class Graphique extends React.Component {
                             timing="ease-in-out"
                             iteration="1"
                             fillMode="both">
-                            Service Sponsoring
+                            Service Graphique
                           </MovingComponent>
                           <MovingComponent
                             type="fadeInFromBottom"
@@ -76,9 +73,10 @@ class Graphique extends React.Component {
                             timing="ease-in-out"
                             iteration="1"
                             fillMode="both">
-                            Facebook & Instagram
-                          </MovingComponent>
-                          <MovingComponent
+                           de TekTree
+                          </MovingComponent> 
+                        </h2>
+                        <MovingComponent
                             type="fadeInFromBottom"
                             duration="1000ms"
                             delay="2s"
@@ -86,108 +84,55 @@ class Graphique extends React.Component {
                             timing="ease-in-out"
                             iteration="1"
                             fillMode="both">
-                            de TekTree
+                             <img
+                              alt="..."
+                              className="floating w-50"
+                              src={require("assets/img/graphique/5.png")}
+                            />
                           </MovingComponent>
-                          
-                        </h2>
+                       
                     </center>
                   </Col>
                   <Col className="mt-9 mt-sm-9" sm="3" xs="6">              
                     <img
                       alt="..."
                       className="img-fluid floating"
-                      src={require("assets/img/heart.png")}
-                      style={{ width: "250px" }}
+                      src={require("assets/img/graphique/12.png")}
                     />
                    </Col>
                   </Row>
-		    	      </section>
-             </div>
-          <section className="section bg-secondary">
+		    </section>
+        </div>
+		
+          <section className="section ">
           <Container>
-            <Row className="row-grid align-items-center">
-              <Col md="6">
-                <Card className="bg-default shadow border-0">
-                   <CardImg alt="..." src={require("assets/img/spon.png")} top/>
-                   <blockquote className="card-blockquote">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="svg-bg" preserveAspectRatio="none" viewBox="0 0 583 95">
-                        <polygon className="fill-default" points="0,52 583,95 0,95"/>
-                        <polygon className="fill-default" opacity=".2" points="0,42 583,95 683,0 0,95"/>
-                      </svg>
-                      <h4 className="display-3 font-weight-bold text-white">
-                        Sponsoring Facebook
-                      </h4>
-                    </blockquote>
-                 </Card>
-              </Col>
-              <Col md="6">
-                  <div className="pl-md-5">
+            
+                  <div className="pl-md-5"><center>
                     <div className="icon icon-lg icon-shape shadow rounded-circle mb-5">      
-                    
-                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><title>like-2</title><g><path fill="#EEBC99" d="M38,45H24c-2.7168,0-5.53418-0.66113-7.93311-1.86035l-4.51416-2.25684 C11.21387,40.71289,11,40.36719,11,39.98828v-14c0-0.23438,0.08203-0.46094,0.23193-0.64062L21,13.62598v-7.6377 c0-1.07812,0.55908-2.04199,1.49561-2.58008c0.93066-0.53418,2.03809-0.53125,2.96191,0.00879 C28.88086,5.41504,29,10.45996,29,13.98828V19h11c2.75684,0,5,2.2373,5,4.98828c0,0.04102-0.00244,0.08301-0.00781,0.12402 l-1.99268,15.94141C42.96436,42.78711,40.73535,45,38,45z"></path> <path fill="#5A7A84" d="M12,45H4c-0.55225,0-1-0.44727-1-1V22c0-0.55273,0.44775-1,1-1h8c0.55225,0,1,0.44727,1,1v22 C13,44.55273,12.55225,45,12,45z"></path></g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><title>badge-13</title><g><path fill="#BFDEE0" d="M34,9c-1.6567192,0-3-1.3432808-3-3c0-0.5522804-0.4499493-1-1.0068493-1H18.0068493 C17.4507809,5,17,5.4531898,17,6c0,1.6567192-1.3432798,3-3,3s-3-1.3432808-3-3c0-0.5522804-0.4556637-1-0.9953976-1H2.999615 C1.8952582,5,1,5.9018517,1,7.002861v33.994278C1,42.1032906,1.8982418,43,3.0061409,43h41.9877167 C46.1018219,43,47,42.0981483,47,40.997139V7.002861C47,5.8967094,46.1125717,5,45.0003891,5h-7.0049896 C37.4456482,5,37,5.4531898,37,6C37,7.6567192,35.6567192,9,34,9z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="#5A7A84" d="M27,19c0-0.5522804,0.4499493-1,1.0068493-1h11.9862995 C40.549221,18,41,18.4438591,41,19c0,0.5522804-0.4499512,1-1.0068512,1H28.0068493C27.4507809,20,27,19.5561409,27,19z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="#5A7A84" d="M27,25c0-0.5522804,0.4499493-1,1.0068493-1h11.9862995 C40.549221,24,41,24.4438591,41,25c0,0.5522804-0.4499512,1-1.0068512,1H28.0068493C27.4507809,26,27,25.5561409,27,25z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="#5A7A84" d="M27,31c0-0.5522804,0.4378796-1,1.0029297-1h4.9941406 C33.5509682,30,34,30.4438591,34,31c0,0.5522804-0.4378815,1-1.0029297,1h-4.9941406C27.4490299,32,27,31.556139,27,31z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="#5A7A84" d="M16,27h-4c-2.7614241,0-5,2.2385807-5,5 c0,0.5522804,0.4499488,1,1.0068455,1h11.9863052C20.5492191,33,21,32.5468102,21,32C21,29.2385807,18.7614193,27,16,27z"></path> <circle fill-rule="evenodd" clip-rule="evenodd" fill="#5A7A84" cx="14" cy="21" r="4"></circle></g></svg>
                     </div>
-                    <h3>Publicité sur Facebook</h3>
+                    <h3>Cartes de visite, Brochures & Flyers</h3>
                     <p className=" lead">
-                    Faire de la pub sur Facebook efficace et rentable quel que soit votre budget
+                    Avec le service graphique,
+                    personnalisez vos cartes de visites, vos brochures ou vous flyers chez TekTree.
+
+                    Ces outils sont un moyen professionnel et pratique d'échanger vos coordonnées.
+
+                    Imprimez vos cartes de visite, vos flyers et vos brochures sur du papier couché ou bristol avec ou sans pelliculage(Brillant ou Mat). 
                     </p>
-                    <p>
-                    Vous êtes une entreprise et vous souhaitez avoir plus de visibilité et augmenter le trafic sur votre site web, ou bénéficier de plus de clients... peut opter pour la publicité Facebook.
-                    C’est un excellent moyen pour toucher vos cibles au plus près là où elles sont.
-                    </p>
-                   
                     <a
                       className="font-weight-bold text-warning mt-5"
                       href="/offres"
-                     
                     >
                      Découvrez nos promos
-                    </a>
+                    </a></center>
                   </div>
-              </Col>
-            </Row>
+              
           </Container>
         </section>
-          
-		    <section className="section ">
-          <Container>
-            <Row className="row-grid align-items-center"> 
-              <Col md="6">
-                <div className="pl-md-5">
-                  <div className="icon icon-lg icon-shape shadow rounded-circle mb-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><title>heart-2</title><g><path fill="#E86C60" d="M43.192,6.808c-5.068-5.068-13.316-5.068-18.385,0C24.526,7.089,24.257,7.385,24,7.695 c-0.257-0.311-0.526-0.606-0.808-0.888c-5.068-5.068-13.316-5.068-18.385,0s-5.068,13.316,0,18.385l18.485,18.485 c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l18.485-18.485C48.261,20.124,48.261,11.876,43.192,6.808z"></path></g></svg>
-                  </div>
-                  <h3>Publicité sur Instagram</h3>
-                  <p className="lead">
-                  DÉVELOPPEZ VOTRE ENTREPRISE SUR INSTAGRAM
-                  </p>
-                  <p>
-                    On vous propose des publicités dans les Stories, des publicités photo, des publicités vidéo, des publicités au format carrousel et plein d'autres propositions vous attendent avec TekTree.
-                  </p>
-                  <p>
-                 Avec le service sponsoring Instagram de TekTree atteignez les personnes qui comptent le plus pour vous.
-                  </p>
-                  <a className="font-weight-bold text-warning mt-5" href="/offres">
-                   Découvrez nos promos
-                  </a>
-                </div>
-              </Col>
-				      <Col md="6">
-                <Card className="bg-default shadow border-0">
-                  <CardImg  alt="..." src={require("assets/img/instagram.jpg")} top/>
-                  <blockquote className="card-blockquote">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="svg-bg" preserveAspectRatio="none" viewBox="0 0 583 95">
-                      <polygon className="fill-default" points="0,52 583,95 0,95"/>
-                      <polygon className="fill-default" opacity=".2" points="0,42 583,95 683,0 0,95"/>
-                    </svg>
-                    <h4 className="display-3 font-weight-bold text-white">Sponsoring Instagram
-                    </h4>
-                  </blockquote>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
+        <section className="">
+          <ImagesGraphique/>
         </section>
-		   
         <section className="section section-lg " style={{backgroundColor:"#e33063"}}>
             <Container className="pt-lg pb-300">
               <Row className="text-center justify-content-center">

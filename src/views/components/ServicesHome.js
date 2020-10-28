@@ -18,7 +18,7 @@ const ServicesHome = () => {
                       A l'occasion de son ouverture, TekTree vous  gâte en vous offrant des 
                         <b className="text-danger"> promos exceptionnelles.</b>
                         Venez découvrir nos promos de folie jusqu'à -70%. 
-                        Offres valables jusqu'à le 1er Novembre.Tirer profit maintenant.
+                        Offres valables jusqu'au 1er Décembre.Tirer profit maintenant.
                         </a>   
                   </div>
                 

@@ -42,7 +42,7 @@ class Landing extends React.Component {
     return (
       <>
         <DemoNavbar />
-        <main ref="main">
+        <main ref="main"  style={{userSelect: 'none'}}>
           <div className="position-relative">
 
             <section className="section section-lg section-shaped pb-250 ">
@@ -87,9 +87,10 @@ class Landing extends React.Component {
                     </div>
                     <h3>Création et maintenance des sites web</h3>
                     <p>
-                      Que ce soit vous voulez votre site web personnel ou professionel, TekTree vous promet de mettre à votre disposition des sites web en toute modernité et avec des normes de qualité internationales.
-				          	  Vous avez déjà un site web mais vous cherchez à ameliorez son vitesse ou sa qualité ou  votre site bug, notre équipe peut vous aidez à surmonter ces problèmes en toute professionnalisme.
+                      Que ce soit vous voulez un site web personnel ou professionel, TekTree met à votre disposition des sites web en toute modernité et avec des normes de qualité internationales.
+				          	  
                     </p>
+                    <p>Vous avez déjà un site web mais vous cherchez à améliorer sa vitesse ou sa qualité ou bien  votre site bug? Notre équipe peut vous aider à surmonter ces problèmes en tout professionnalisme.</p>
                     <Button
                             className="mt-4"
                             color="danger"
@@ -120,7 +121,7 @@ class Landing extends React.Component {
                     </div>
                     <h3>Sponsoring</h3>
                     <p >
-                      Avez-vous besoin que beaucoup des gens voient votre travail ou votre entreprise? Voulez-vous visez le plus possible des publics? Nous vous offrons le service Sponsoring qui fait des publicités du votre produit sur les réseaux sociaux comme Facebook et Instagram
+                    Vous êtes une entreprise et vous souhaitez avoir plus de visibilité et augmenter le trafic sur votre site web? Nous vous offrons le service Sponsoring qui fait des publicités du votre produit sur les réseaux sociaux comme Facebook et Instagram.
                     </p>
 					<Button
                             className="mt-4"
@@ -186,7 +187,7 @@ class Landing extends React.Component {
           </section>
           <section className="section section-lg pt-0">
             <Container>
-              <Card className="bg-gradient-danger shadow-lg border-0">
+              <Card className=" shadow-lg border-0" style={{backgroundColor:"#ffcba4"}}>
                 <div className="p-5">
                   <Row className="align-items-center">
                     <Col lg="8">
@@ -194,7 +195,7 @@ class Landing extends React.Component {
                         Notre bonheur est votre confort.
                       </h3>
                       <p className="lead text-white mt-3">
-                        Nous mettons à votre disposition tous ces services et plus encore, à des prix abordables pour tous et avec plusieurs facilités de paiement.
+                        Nous mettons à votre disposition tous ces services et plus encore, à des prix abordables et avec facilités de paiement.
                       </p>
                       <p className="signature" style={{marginLeft:"400px", fontSize:"17px", color:"white"}}>L'équipe de TekTree.</p>
                     </Col>
@@ -211,9 +212,7 @@ class Landing extends React.Component {
               <Row className="text-center justify-content-center">
                 <Col lg="10">
                   <h2 className="display-3 text-white">Contactez-nous pour plus d'information</h2>
-                  <p className="lead text-white">
-                    Nous vous fournissons tous ces services et plus encore, à des prix abordables pour tous et avec plusieurs moyens de facilités de paiement.
-                  </p>
+                  
                 </Col>
               </Row>
             

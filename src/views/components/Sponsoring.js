@@ -42,7 +42,7 @@ class Sponsoring extends React.Component {
         <DemoNavbar />
         <main ref="main" style={{userSelect: 'none'}}>
           <div className="position-relative">
-            <section className="section section-lg section-shaped pb-150 " style={{backgroundColor:"#e33063"}}>
+            <section className="section section-lg section-shaped pb-150 " style={{backgroundColor:"#04638f"}}>
               <div className="shape shape-style-1 shape-default ">  
               </div>
                  <Row>
@@ -188,7 +188,7 @@ class Sponsoring extends React.Component {
           </Container>
         </section>
 		   
-        <section className="section section-lg " style={{backgroundColor:"#e33063"}}>
+        <section className="section section-lg " style={{backgroundColor:"#04638f"}}>
             <Container className="pt-lg pb-300">
               <Row className="text-center justify-content-center">
                 <Col lg="10">

@@ -44,7 +44,7 @@ class Timer extends React.Component {
   render() {
     return (
       <div>
-        <div className="App-title" style={{fontSize: "50px", marginTop: "60px"}}>Profitez de nos <b>{this.props.eventName}</b> avant le 01 Novembre. Il vous reste:
+        <div className="App-title" style={{fontSize: "45px", marginTop: "60px"}}>Profitez de nos <b>{this.props.eventName}</b> avant le 01 Décembre. Il vous reste:
         </div>
         <div className="clock" style={{display: "inline", margin: "10px"}}>
           {this.leadingZero(this.state.days)} {this.state.days === 1 ? 'day' : 'days'}
@@ -74,7 +74,7 @@ class Landing extends React.Component {
       status: "",
       form:"on",
       events:[
-        { name:'Offres Spéciales', date:'November 1, 2020' }, 
+        { name:'Offres Spéciales', date:'December 1, 2020' }, 
       ],
       newDate: "",
       newName: "",
@@ -148,14 +148,14 @@ class Landing extends React.Component {
               <div className="shape shape-style-1 shape-default bg-gradient-default">
               </div>
  
-            <Row>
-              <Col className="mt-9 mt-sm-9" sm="3" xs="6"> 
+            <Row className="mb-9 mb-sm-9 mt-6">
+              <Col className="mt-9 mt-sm-6" sm="3" xs="12"> 
                 <img
                   alt="..."
                   className="img-fluid floating"
                   src={require("assets/img/gift.png")}
-                  style={{ width: "150px" }}
-                  sm="3" xs="6"
+                 
+                  
                 />
               </Col>
           
@@ -164,12 +164,12 @@ class Landing extends React.Component {
                       {events}
                       </div>
               </Col>
-              <Col className="mt-9 mt-sm-9" sm="3" xs="6">
+              <Col className="mt-9 mt-sm-6" sm="3" xs="6">
                 <img
                   alt="..."
                   className="img-fluid floating"
                   src={require("assets/img/bouk.png")}
-                  style={{ width: "150px" }}
+                  
                 />
               </Col>
             </Row>

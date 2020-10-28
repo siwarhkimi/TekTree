@@ -60,6 +60,9 @@
     "react-datetime": "2.16.3",
     "react-deck-swiper": "^1.0.9",
     "react-dom": "16.12.0",
+    "react-grid-gallery": "^0.5.5",
+    "react-id-swiper": "^4.0.0",
+    "react-image-gallery": "^1.0.8",
     "react-jump": "0.0.9",
     "react-moving-text": "0.0.7",
     "react-reveal": "^1.2.2",
@@ -75,7 +78,8 @@
     "reactstrap": "8.4.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^1.3.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "swiper": "^6.3.4"
   },
   "devDependencies": {
     "@types/googlemaps": "3.39.2",
