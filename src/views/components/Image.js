@@ -5,7 +5,7 @@ import {
   MDBContainer
 } from "mdbreact";
 import Fade from 'react-reveal/Fade';
-
+import { Link } from "react-router-dom";
 
 class CarouselPage extends Component {
   render() {
@@ -80,10 +80,10 @@ class CarouselPage extends Component {
        		 <MDBCol md="6" className="mb-3">
 				<div className="blur--hover">
 					<div className="blur--hover">
-						<a href="/sponsoring">
+						<Link to="/sponsoring">
 							<img alt="..." className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/smedia.jpg')} />
 							<span className="blur-hidden h4 text-darker" style={{fontSize:'30px'}}><center>Sponsoring Social media</center></span>
-						</a>
+						</Link>
 					</div>
 				</div>
        		 </MDBCol>
@@ -93,21 +93,21 @@ class CarouselPage extends Component {
 	    <MDBRow>
          	<MDBCol lg="4" md="12" className="mb-3">
           		<div className="blur--hover">
-					<a href="/graphiques">
+					<Link to="/graphiques">
 		  				<img alt="..." className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/desss.jpg')} />
 		  				<span className="blur-hidden h3 text-darker" style={{fontSize:'30px'}}>
 						<center>Flyers</center>	
 						</span>
-					</a>
+					</Link>
 				</div>	  
             </MDBCol>
             <MDBCol lg="4" md="6" className="mb-3">
 				<div className="blur--hover">
 					<div className="blur--hover">
-						<a href="/graphiques">
+						<Link to="/graphiques">
 							<img  alt="..." className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/flyer.jpg')} />
 							<span className="blur-hidden h4 text-darker" style={{fontSize:'30px'}}><center>Brochure</center></span>
-						</a>
+						</Link>
 					</div>
 				</div>
           </MDBCol>
