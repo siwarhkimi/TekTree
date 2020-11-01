@@ -19,6 +19,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact render={props => <Index {...props} />} />
+      <Route path="/TekTree" exact render={props => <Index {...props} />} />
       <Route
         path="/offres"
         exact
