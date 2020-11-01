@@ -43,13 +43,14 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "https://siwarhkimi.github.io/TekTree/",
+  "homepage": "https://siwarhkimi.github.io/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "avataaars": "^1.2.1",
     "bootstrap": "^4.3.1",
     "classnames": "2.2.6",
     "framer-motion": "^2.7.5",
+    "gh-pages": "^3.1.0",
     "headroom.js": "0.11.0",
     "mdbreact": "^4.27.0",
     "moment": "2.24.0",
@@ -89,7 +90,6 @@
     "@types/markerclustererplus": "2.1.33",
     "@types/react": "16.9.19",
     "eslint-plugin-flowtype": "3.13.0",
-    "gh-pages": "^3.1.0",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
     "typescript": "3.7.5"
