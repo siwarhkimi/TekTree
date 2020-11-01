@@ -114,10 +114,10 @@ class CarouselPage extends Component {
           <MDBCol lg="4" md="6" className="mb-3">
 		  		<div className="blur--hover">
 					<div className="blur--hover">
-						<a href="./graphiques">
+					 <Link to="/graphiques">
 							<img alt="..." className="img-fluid z-depth-1 blur-item rounded shadow-lg on-screen" src={require('assets/img/cartes.jpg')} />
 							<span className="blur-hidden h4 flex-cente text-darker" style={{fontSize:'30px'}}><center>Cartes</center></span>
-						</a>
+						</Link>
 					</div>
 				</div>
           </MDBCol>
