@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, Row, Col, UncontrolledCarousel } from "reactstrap";
 import MovingComponent from 'react-moving-text';
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -46,15 +47,15 @@ class Carousel extends React.Component {
                   à votre business model? ou simplement vous voulez avoir votre site personnel?<br></br>
                   NOUS SOMMES LÀ POUR RÉALISER VOS RÊVES.
                 </p>   
-                             
+                <Link to="/">            
                 <Button
                   className="btn-white mt-4"
                   color="default"
-                  href="/offres"
+                 
                 >
                   Découvrez Nos promos
                 </Button>
-               
+                </Link> 
               </Col>
               <Col className="mb-lg-auto" lg="6">
                 <div className="rounded shadow-lg overflow-hidden transform-perspective-right ">
