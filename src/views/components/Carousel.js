@@ -47,7 +47,7 @@ class Carousel extends React.Component {
                   à votre business model? ou simplement vous voulez avoir votre site personnel?<br></br>
                   NOUS SOMMES LÀ POUR RÉALISER VOS RÊVES.
                 </p>   
-                <Link to="/">            
+                <Link to="/offres">            
                 <Button
                   className="btn-white mt-4"
                   color="default"
