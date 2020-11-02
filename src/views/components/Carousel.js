@@ -52,7 +52,7 @@ class Carousel extends React.Component {
                   color="default"
                   href="/offres"
                 >
-                  Découvrez nos promos
+                  Découvrez  promos
                 </Button>
                 <Button
                   className="btn-white mt-4"
