@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
+import { Link } from "react-router-dom";
 
 class Landing extends React.Component {
   constructor(props) {
@@ -91,11 +92,12 @@ class Landing extends React.Component {
 				          	  
                     </p>
                     <p>Vous avez déjà un site web mais vous cherchez à améliorer sa vitesse ou sa qualité ou bien  votre site bug? Notre équipe peut vous aider à surmonter ces problèmes en tout professionnalisme.</p>
+                    
+                    <Link to="/creation-des-sites-web"></Link>
                     <Button
                             className="mt-4"
                             color="danger"
-                            href="/creation-des-sites-web"
-                            
+                           
                           >
                             En savoir plus
                           </Button>
@@ -123,14 +125,12 @@ class Landing extends React.Component {
                     <p >
                     Vous êtes une entreprise et vous souhaitez avoir plus de visibilité et augmenter le trafic sur votre site web? Nous vous offrons le service Sponsoring qui fait des publicités du votre produit sur les réseaux sociaux comme Facebook et Instagram.
                     </p>
-					<Button
+				              <Link to="/sponsoring">	<Button
                             className="mt-4"
                             color="default"
-                            href="/sponsoring"
-                            
                           >
                             En savoir plus
-                          </Button>
+                          </Button></Link>
                   </div>
                 </Col>
               </Row>
@@ -166,14 +166,14 @@ class Landing extends React.Component {
                       <p className="">
                         Avez-vous besoin des cartes visites, des brochures, ou des flyers, ... l'équipe de TekTree met à votre disposition le service graphique qui vous permet de personaliser vos graphique à votre façon.
                       </p>
-					  <Button
+                      <Link to="/graphiques">
+					               <Button
                             className="mt-4"
                             color="danger"
-                            href="/graphiques"
-                            
                           >
                             En savoir plus
                           </Button>
+                      </Link>
                     </div>
                   </div>
                   

@@ -7,7 +7,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
-
+import { Link } from "react-router-dom";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 import { MovingComponent } from "react-moving-text";
@@ -135,13 +135,13 @@ class Sponsoring extends React.Component {
                     C’est un excellent moyen pour toucher vos cibles au plus près là où elles sont.
                     </p>
                    
-                    <a
+                    <Link
                       className="font-weight-bold text-warning mt-5"
-                      href="/offres"
+                      to="/offres"
                      
                     >
                      Découvrez nos promos
-                    </a>
+                    </Link>
                   </div>
               </Col>
             </Row>
@@ -166,9 +166,9 @@ class Sponsoring extends React.Component {
                   <p>
                  Avec le service sponsoring Instagram de TekTree atteignez les personnes qui comptent le plus pour vous.
                   </p>
-                  <a className="font-weight-bold text-warning mt-5" href="/offres">
+                  <Link className="font-weight-bold text-warning mt-5" to="/offres">
                    Découvrez nos promos
-                  </a>
+                  </Link>
                 </div>
               </Col>
 				      <Col md="6">

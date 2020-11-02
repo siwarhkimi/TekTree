@@ -7,7 +7,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
-
+import { Link } from "react-router-dom";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 import { MovingComponent } from "react-moving-text";
@@ -120,12 +120,12 @@ class Graphique extends React.Component {
 
                     Imprimez vos cartes de visite, vos flyers et vos brochures sur du papier couché ou bristol avec ou sans pelliculage(Brillant ou Mat). 
                     </p>
-                    <a
+                    <Link
                       className="font-weight-bold text-warning mt-5"
-                      href="/offres"
+                      to="/offres"
                     >
                      Découvrez nos promos
-                    </a></center>
+                    </Link></center>
                   </div>
               
           </Container>

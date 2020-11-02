@@ -10,7 +10,7 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 import { MovingComponent } from "react-moving-text";
-
+import { Link } from "react-router-dom";
 
 
 class CreationWeb extends React.Component {
@@ -135,13 +135,13 @@ class CreationWeb extends React.Component {
                     <p>
                      Et comme votre site représente votre entreprise sur le web, TekTree vous promet de vous créer un site à l’image de votre entreprise avec vos couleurs, votre logo, vos photos et votre contenu. 
                     </p>
-                    <a
+                    <Link
                       className="font-weight-bold text-warning mt-5"
-                      href="/offres"
+                      to="/offres"
                       onClick={e => e.preventDefault()}
                     >
                      Découvrez nos promos
-                    </a>
+                    </Link>
                   </div>
               </Col>
             </Row>
@@ -164,9 +164,9 @@ class CreationWeb extends React.Component {
                   <p>
                   Pour vous permettre d’atteindre ces objectifs nous mettons à votre disposition un accompagnement stratégique de qualité ainsi que notre expertise en développement de plateforme e-commerce.
                   </p>
-                  <a className="font-weight-bold text-warning mt-5" href="/offres" onClick={e => e.preventDefault()}>
+                  <Link className="font-weight-bold text-warning mt-5" to="/offres" onClick={e => e.preventDefault()}>
                    Découvrez nos promos
-                  </a>
+                  </Link>
                 </div>
               </Col>
 				      <Col md="6">
@@ -231,13 +231,13 @@ class CreationWeb extends React.Component {
                      <p>
                      Votre site web est la réflexion publique de l’image de l’entreprise. Un site mal entretenu et contenant beaucoup d’erreurs (liens hypertextes cassées, pages 404, informations périmées) projette une image peu soignée de votre entreprise.
                      </p>
-                     <a
+                     <Link
                       className="font-weight-bold text-warning mt-5"
-                      href="/offres"
+                      to="/offres"
                       onClick={e => e.preventDefault()}
                      >
                      Découvrez nos promos
-                     </a>
+                     </Link>
                     </div>
                 </Col>
               </Row>
