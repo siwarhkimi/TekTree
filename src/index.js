@@ -16,7 +16,7 @@ import NotFound from "views/components/404.js";
 
 
 ReactDOM.render(
-  <Router>
+  <BrowserRouter>
     <Switch>
       <Route path="/" exact render={props => <Index {...props} />} />
       <Route path="/TekTree" exact render={props => <Index {...props} />} />
@@ -53,6 +53,6 @@ ReactDOM.render(
       /> 
       <Redirect to="/404" />
     </Switch>
-  </Router>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
