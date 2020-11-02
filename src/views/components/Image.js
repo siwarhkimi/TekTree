@@ -16,7 +16,7 @@ class CarouselPage extends Component {
           <MDBCol md="12" className="mb-3 ">
 		  <Fade left>
 				<div className="blur--hover">
-					<a href="/services"><img alt="..." className="img-fluid z-depth-1 blur-item mt-5 rounded-lg shadow-lg on-screen" src={require('assets/img/agence1.jpg')} />
+					<a href="https://siwarhkimi.github.io/TekTree/services"><img alt="..." className="img-fluid z-depth-1 blur-item mt-5 rounded-lg shadow-lg on-screen" src={require('assets/img/agence1.jpg')} />
 					<span className="blur-hidden h3 text-darker" style={{fontSize:'80px'}}>
 					<center>	Nos Services Web</center>
 					</span>
