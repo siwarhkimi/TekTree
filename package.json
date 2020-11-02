@@ -22,6 +22,7 @@
   ],
   "author": "TekTree Team",
   "license": "MIT",
+  "homepage": "https://siwarhkimi.github.io/TekTree/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
@@ -43,7 +44,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "https://siwarhkimi.github.io/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "avataaars": "^1.2.1",
