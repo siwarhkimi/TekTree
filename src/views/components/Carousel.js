@@ -54,6 +54,27 @@ class Carousel extends React.Component {
                 >
                   Découvrez nos promos
                 </Button>
+                <Button
+                  className="btn-white mt-4"
+                  color="default"
+                  href="TekTree/offres"
+                >
+                  Découvrez nos promos
+                </Button>
+                <Button
+                  className="btn-white mt-4"
+                  color="default"
+                  href="https://siwarhkimi.github.io/TekTree/offres"
+                >
+                  Découvrez nos promos
+                </Button>
+                <Button
+                  className="btn-white mt-4"
+                  color="default"
+                  href="https://siwarhkimi.github.io/offres"
+                >
+                  Découvrez nos promos
+                </Button>
               </Col>
               <Col className="mb-lg-auto" lg="6">
                 <div className="rounded shadow-lg overflow-hidden transform-perspective-right ">
