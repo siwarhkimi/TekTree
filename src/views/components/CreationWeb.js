@@ -138,7 +138,7 @@ class CreationWeb extends React.Component {
                     <Link
                       className="font-weight-bold text-warning mt-5"
                       to="/offres"
-                      onClick={e => e.preventDefault()}
+                     
                     >
                      Découvrez nos promos
                     </Link>
@@ -164,7 +164,7 @@ class CreationWeb extends React.Component {
                   <p>
                   Pour vous permettre d’atteindre ces objectifs nous mettons à votre disposition un accompagnement stratégique de qualité ainsi que notre expertise en développement de plateforme e-commerce.
                   </p>
-                  <Link className="font-weight-bold text-warning mt-5" to="/offres" onClick={e => e.preventDefault()}>
+                  <Link className="font-weight-bold text-warning mt-5" to="/offres" >
                    Découvrez nos promos
                   </Link>
                 </div>
@@ -234,7 +234,7 @@ class CreationWeb extends React.Component {
                      <Link
                       className="font-weight-bold text-warning mt-5"
                       to="/offres"
-                      onClick={e => e.preventDefault()}
+                      
                      >
                      Découvrez nos promos
                      </Link>
