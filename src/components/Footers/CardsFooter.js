@@ -57,9 +57,7 @@ class CardsFooter extends React.Component {
                       Nos services
                       </Link>
                   
-                  </NavItem>
                   
-                  <NavItem>
                     <Link
                       to="/offres"                     
                     >
