@@ -9,6 +9,7 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class CardsFooter extends React.Component {
   render() {
@@ -52,9 +53,11 @@ class CardsFooter extends React.Component {
                 <Nav className="nav-footer justify-content-end">
                   <NavItem>
                     <NavLink
-                      href="/services"  
+                      
                     >
+                      <Link to="/services">
                       Nos services
+                      </Link>
                     </NavLink>
                   </NavItem>
                   
