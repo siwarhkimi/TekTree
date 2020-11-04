@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/TekTree/precache-manifest.545a1200612728e10efd37e009682636.js"
+  "/TekTree/precache-manifest.a84511e130802838ecc3423fa67532e5.js"
 );
 
 self.addEventListener('message', (event) => {
