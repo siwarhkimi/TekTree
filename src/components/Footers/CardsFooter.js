@@ -52,18 +52,25 @@ class CardsFooter extends React.Component {
               <Col md="6">
                 <Nav className="nav-footer justify-content-end">
                   <NavItem>
-                   
+                    
                       <Link to="/services">
+                      <NavLink
+                      
+                      >
                       Nos services
+                      </NavLink>
                       </Link>
-                  
-                  
-                    <Link
-                      to="/offres"                     
-                    >
-                      Nos offres
-                    </Link>
+                    
                   </NavItem>
+                  
+                  
+                    <NavLink
+                      href="/offres"                     
+                    ><NavItem>
+                      Nos offres
+                      </NavItem>
+                    </NavLink>
+                  
                 </Nav>
               </Col>
             </Row>
