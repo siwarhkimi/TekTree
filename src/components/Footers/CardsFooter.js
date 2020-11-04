@@ -60,11 +60,11 @@ class CardsFooter extends React.Component {
                   </NavItem>
                   
                   <NavItem>
-                    <NavLink
-                      href="/offres"                     
+                    <Link
+                      to="/offres"                     
                     >
                       Nos offres
-                    </NavLink>
+                    </Link>
                   </NavItem>
                 </Nav>
               </Col>
